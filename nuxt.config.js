@@ -2,10 +2,16 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio'
+    }
+  },
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
+    preview: true,
+
   },
 
   modules: [
