@@ -1,5 +1,7 @@
 <template>
-    <div class="w-full flex justify-between items-center gap-4">
+    <div
+        class="w-full flex justify-between items-center gap-4 max-w-[65ch] mx-auto py-8"
+    >
         <NuxtLink to="/">{{ header.title }}</NuxtLink>
         <div>
             <span>{{ time }}</span>
