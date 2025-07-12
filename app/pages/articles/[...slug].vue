@@ -1,0 +1,18 @@
+<template>
+    <div>
+        <PageHeader
+            :title="page?.title"
+            :description="page?.description"
+        />
+        <ContentRenderer
+            v-if="page && page.body"
+            :value="page"
+        />
+    </div>
+</template>
+<script lang="ts" setup>
+const route = useRoute();
+const { data: page } = await useAsyncData(route.path, () => {
+    return queryCollection("article").path(route.path).first();
+});
+</script>
