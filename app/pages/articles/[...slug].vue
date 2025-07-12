@@ -1,14 +1,14 @@
 <template>
     <div>
-        <PageHeader v-if="page.title"
-            :title="page.title"
+        <PageHeader
+            v-if="page?.title"
+            :title="page?.title"
             :description="page?.description"
         />
         <ContentRenderer
             v-if="page && page.body"
             :value="page"
         />
-
     </div>
 </template>
 <script lang="ts" setup>
