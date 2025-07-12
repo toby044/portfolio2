@@ -1,5 +1,5 @@
 ---
 title: Testing Anton
 description: Testing Anton's component system
-date: x
+date: 2024-06-09
 ---

@@ -8,11 +8,12 @@ export default defineContentConfig({
             schema: z.object({
                 title: z.string(),
                 description: z.string(),
-                date: z.string()
+                date: z.date()
             }),
-            project: defineCollection({
-                type: 'page',
-                source: 'projects/*.md'
-            })
-        }
+        }),
+        project: defineCollection({
+            type: 'page',
+            source: 'projects/*.md'
+        })
+    }
 })
