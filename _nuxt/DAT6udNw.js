@@ -1,0 +1,1 @@
+import{_ as n,d as r,e as c,h as s,Q as t}from"./BDkesJ-x.js";const l={},o={class:"flex space-x-4 items-center justify-between"};function a(e,i){return c(),r("div",o,[s("div",null,[t(e.$slots,"left")]),s("div",null,[t(e.$slots,"center")]),s("div",null,[t(e.$slots,"right")])])}const _=Object.assign(n(l,[["render",a]]),{__name:"Pictures"});export{_ as default};
