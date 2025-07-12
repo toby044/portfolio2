@@ -13,7 +13,7 @@ export default defineContentConfig({
         }),
         project: defineCollection({
             type: 'page',
-            source: 'projects/*.md'
+            source: 'projects/*.md',
             schema: z.object({
                 title: z.string(),
                 description: z.string().optional(),
