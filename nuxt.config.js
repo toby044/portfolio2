@@ -6,8 +6,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
-    preview: true,
-
   },
 
   modules: [
