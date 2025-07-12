@@ -19,11 +19,6 @@ export default defineNuxtConfig({
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
-      gitInfo: {
-        name: 'portfolio2',
-        owner: 'toby044',
-        url: 'https://github.com/toby044/portfolio2/'
-      }
     }
   },
   vite: {
