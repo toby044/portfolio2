@@ -7,7 +7,10 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-
+  components: [
+    '~/components',
+    { path: '~/components/content', pathPrefix: false },
+  ],
   modules: [
     '@nuxt/content',
     '@nuxt/fonts',
