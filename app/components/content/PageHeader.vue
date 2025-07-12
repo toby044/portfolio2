@@ -1,5 +1,6 @@
 <template>
-    <div class="c-page-header"></div>
+    <div class="c-page-header">
+    </div>
 </template>
 <script setup>
 defineProps({
@@ -7,3 +8,7 @@ defineProps({
     description: String,
 });
 </script>
+<style lang="postcss">
+:where(.c-page-header) {
+}
+</style>
