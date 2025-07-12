@@ -20,6 +20,10 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
     }
   },
+  components: {
+    global: true,
+    dirs: ['~/components/content']
+  },
   vite: {
     plugins: [
       tailwindcss(),
