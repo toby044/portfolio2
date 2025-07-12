@@ -4,12 +4,10 @@ export default defineContentConfig({
     collections: {
         article: defineCollection({
             type: 'page',
-            source: 'articles/*.md'
+            source: 'articles/*.md',
             schema: z.object({
-                title: z.string(),
-                description: z.string(),
-                date: z.date()
-            }),
+                date: z.string()
+            })
         }),
         project: defineCollection({
             type: 'page',
