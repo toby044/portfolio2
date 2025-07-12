@@ -2,11 +2,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  content: {
-    preview: {
-      api: 'https://api.nuxt.studio'
-    }
-  },
+
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
@@ -22,7 +18,16 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
   ],
   css: ['~/assets/css/main.css'],
-
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+      gitInfo: {
+        name: 'portfolio2',
+        owner: 'toby044',
+        url: 'https://github.com/toby044/portfolio2/'
+      }
+    }
+  },
   vite: {
     plugins: [
       tailwindcss(),
