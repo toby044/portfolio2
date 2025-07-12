@@ -8,7 +8,7 @@ export default defineContentConfig({
             schema: z.object({
                 title: z.string(),
                 description: z.string().optional(),
-                date: z.string()
+                date: z.string().datetime(),
             })
         }),
         project: defineCollection({
