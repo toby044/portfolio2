@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
+    '@nuxthq/studio'
   ],
   css: ['~/assets/css/main.css'],
 
