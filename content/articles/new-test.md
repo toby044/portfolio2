@@ -9,4 +9,10 @@ date: 2025-07-01T00:00:00.000Z
 ::pictures
 #left
 ![car.jpg](/car.jpg)
+
+#center
+![car.jpg](/car.jpg)
+
+#right
+![car.jpg](/car.jpg)
 ::

@@ -12,7 +12,12 @@
                 }}
             </time>
         </div>
-        <p v-if="description" class="">{{ description }}</p>
+        <p
+            v-if="description"
+            class=""
+        >
+            {{ description }}
+        </p>
     </div>
 </template>
 <script setup>

@@ -1,15 +1,14 @@
 <template>
-    <div class="flex space-x-4 items-center justify-between">
-        <div>
-            <slot name="left"></slot>
+    <div class="grid grid-cols-3 gap-4">
+        <div class="grow">
+            <slot name="left" />
         </div>
-        <div>
-            <slot name="center"></slot>
+        <div class=grow>
+            <slot name="center" />
         </div>
-        <div>
-            <slot name="right"></slot>
+        <div class="grow">
+            <slot name="right" />
         </div>
     </div>
 </template>
-<script setup>
-</script>
+<script setup></script>
