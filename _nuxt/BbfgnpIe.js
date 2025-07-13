@@ -1,0 +1,1 @@
+import{u as s,an as u,al as r,ao as o,ap as i}from"./BDkesJ-x.js";function c(e){var t;const n=e||s();return((t=n.ssrContext)==null?void 0:t.head)||n.runWithContext(()=>{if(u()){const a=r(o);if(!a)throw new Error("[nuxt] [unhead] Missing Unhead instance.");return a}})}function h(e,n={}){const t=c(n.nuxt);return i(e,{head:t,...n})}export{c as i,h as u};
