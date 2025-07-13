@@ -1,15 +1,12 @@
 index.md
 
-
 ::pictures
-
 #left
 ![Portfolio](/car.jpg)
-#center
 
+#center
 ![Portfolio](/car.jpg)
 
 #right
 ![Portfolio](/car.jpg)
-
 ::
