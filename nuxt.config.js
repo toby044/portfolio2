@@ -21,8 +21,13 @@ export default defineNuxtConfig({
     }
   },
   components: {
-    global: true,
-    dirs: ['~/components/content']
+    dirs: [
+      {
+        path: "~/components/global",
+        global: true
+      },
+      "~/components"
+    ]
   },
   vite: {
     plugins: [
