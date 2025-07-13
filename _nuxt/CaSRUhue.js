@@ -1,1 +1,0 @@
-import{_ as n,d as l,e as r,h as s,W as t}from"./DgRps4wa.js";const c={},o={class:"flex space-x-4 items-center justify-between"};function a(e,i){return r(),l("div",o,[s("div",null,[t(e.$slots,"left")]),s("div",null,[t(e.$slots,"center")]),s("div",null,[t(e.$slots,"right")])])}const _=Object.assign(n(c,[["render",a]]),{__name:"Pictures"});export{_ as default};
