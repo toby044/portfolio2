@@ -1,1 +1,0 @@
-import{_ as a,d as e,e as t}from"./BKieBgHS.js";const c={},o={class:"sr-only","aria-label":"Loading...",role:"status"};function r(n,s){return t(),e("div",o)}const _=Object.assign(a(c,[["render",r],["__scopeId","data-v-e3249305"]]),{__name:"ScriptAriaLoadingIndicator"});export{_ as default};

@@ -1,1 +1,0 @@
-import{_ as a,d as s,e as t,g as c,h as n,D as r,Q as d}from"./BKieBgHS.js";const _={},l={class:"max-w-[65ch] mx-auto"};function p(e,f){const o=r("AppHeader");return t(),s("div",null,[c(o),n("div",l,[d(e.$slots,"default")])])}const u=a(_,[["render",p]]);export{u as default};
