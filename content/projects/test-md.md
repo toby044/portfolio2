@@ -12,9 +12,12 @@ date: 2025-07-02T00:00:00.000Z
 # Tags here!? Images there!?
 
 ::pictures
-#LEFT
-![car.jpg](/car.jpg)
+#Left
+asdasasdfdf
 
 #Center
+adfsad
+
+#right
 ![car.jpg](/car.jpg)
 ::
