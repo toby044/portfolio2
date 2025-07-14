@@ -17,9 +17,10 @@ export default defineContentConfig({
             schema: z.object({
                 title: z.string(),
                 description: z.string().optional(),
-                date: z.string().datetime(),
-                images: z.array(z.object({
-                    src: z.string(), 
+                date: z.string().datetime().optional(),
+                headerImage: z.string().optional(),
+                carousel: z.array(z.object({
+                    src: z.string(),
                     alt: z.string().optional(),
                     caption: z.string().optional()
                 })).optional(),
