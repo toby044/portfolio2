@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li
-                v-for="post in posts"
+                v-for="post in articles"
                 :key="post.id"
             >
                 <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
@@ -11,7 +11,7 @@
     </div>
 </template>
 <script setup>
-const { data: posts } = await useAsyncData("blog", () =>
+const { data: articles } = await useAsyncData("blog", () =>
     queryCollection("article").all()
 );
 </script>

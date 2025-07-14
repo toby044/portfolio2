@@ -1,6 +1,7 @@
 <template>
     <div>
         <PageHeader
+            v-if="page?.title"
             :title="page?.title"
             :description="page?.description"
         />
