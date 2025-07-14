@@ -12,12 +12,12 @@ date: 2025-07-02T00:00:00.000Z
 # Tags here!? Images there!?
 
 ::pictures
-#Left
-asdasasdfdf
+#left
+![Portfolio](/car.jpg)
 
-#Center
-adfsad
+#center
+![Portfolio](/car.jpg)
 
 #right
-![car.jpg](/car.jpg)
+![Portfolio](/car.jpg)
 ::

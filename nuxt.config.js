@@ -20,15 +20,15 @@ export default defineNuxtConfig({
       api: 'https://api.nuxt.studio',
     }
   },
-  components: {
-    dirs: [
-      {
-        path: "~/components/global",
-        global: true
-      },
-      "~/components"
-    ]
-  },
+  // components: {
+  //   dirs: [
+  //     {
+  //       path: "~/components/global",
+  //       global: true
+  //     },
+  //     "~/components"
+  //   ]
+  // },
   vite: {
     plugins: [
       tailwindcss(),

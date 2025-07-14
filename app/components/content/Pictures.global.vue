@@ -3,7 +3,7 @@
         <div class="grow">
             <slot name="left" />
         </div>
-        <div class=grow>
+        <div class="grow">
             <slot name="center" />
         </div>
         <div class="grow">
