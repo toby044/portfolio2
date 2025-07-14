@@ -1,17 +1,24 @@
 <template>
     <div>
+        <BreadCrumb :crumbs="[{ title: 'Forside', url: '/' }]" />
+
         <ul>
             <li
-                v-for="post in posts"
-                :key="post.id"
+                v-for="item in projects"
+                :key="item.id"
+                class="py-2 border-b border-indigo-500 last:border-b-0"
             >
-                <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
+                <NuxtLink
+                    :to="item.path"
+                    class="block hover:underline"
+                    >{{ item.title }}</NuxtLink
+                >
             </li>
         </ul>
     </div>
 </template>
 <script setup>
-const { data: posts } = await useAsyncData("blog", () =>
+const { data: projects } = await useAsyncData("projects", () =>
     queryCollection("project").all()
 );
 </script>

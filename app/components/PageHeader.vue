@@ -1,5 +1,7 @@
 <template>
     <div class="page-header">
+        <BreadCrumb v-if="crumbs" :crumbs="crumbs" />
+
         <div class="flex justify-between">
             <h1 class="font-medium text-2xl">{{ title }}</h1>
             <time v-if="date">
@@ -25,6 +27,7 @@ defineProps({
     title: String,
     description: String,
     date: String,
+    crumbs: Array,
 });
 </script>
 <style lang="postcss"></style>
