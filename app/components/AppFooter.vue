@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between sticky bottom-8 pt-12">
+    <div class="flex justify-between sticky bottom-8 pt-8 -mx-1 bg-white">
         <a
             href="mailto:tobiasnolesen@gmail.com"
             class="flex gap-1 items-center text-sm group"

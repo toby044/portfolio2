@@ -26,5 +26,6 @@ const skills = [
     "Responsive Design",
     "Accessibility (a11y)",
     "Conventional Commits",
+    "B.E.M",
 ];
 </script>

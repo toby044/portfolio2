@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 gap-8">
+    <div class="grid grid-cols-1 gap-8 pb-4">
         <div>
             <p class="text-sm">
                 Developer based in Vejle, Denmark, excited about crafting great

@@ -21,7 +21,7 @@
                     v-for="link in headerLinks"
                     :key="link.title"
                     :to="link.url"
-                    class="mr-2 p-1 text-sm transition-colors duration-100 hover:text-pink-500"
+                    class="mr-2 last:mr-0 p-1 text-sm transition-colors duration-100 hover:text-pink-500"
                     exact-active-class="text-pink-500"
                 >
                     {{ link.title }}
