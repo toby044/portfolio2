@@ -18,6 +18,7 @@ const skills = [
     "Vue.js",
     "Nuxt.js",
     "TailwindCSS",
+    "UnoCSS",
     "Laravel",
     "MongoDB",
     "Node.js",
