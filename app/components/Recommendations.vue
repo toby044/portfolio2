@@ -84,11 +84,11 @@ const recommendations = [
         },
         from: "Limbo Works",
     },
-    {
-        who: { name: "Simon Milfred", title: "Head of Frontend" },
-        what: { original: "da", da: "test da", en: "test en" },
-        from: "Limbo Works",
-    },
+    // {
+    //     who: { name: "Simon Milfred", title: "Head of Frontend" },
+    //     what: { original: "da", da: "test da", en: "test en" },
+    //     from: "Limbo Works",
+    // },
 ];
 </script>
 <style lang="postcss">
