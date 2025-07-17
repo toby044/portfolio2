@@ -1,16 +1,44 @@
 <template>
     <div
-        class="w-full flex justify-between items-center gap-4 max-w-[65ch] mx-auto py-8"
+        class="w-full flex justify-between items-center gap-4 max-w-[65ch] mx-auto pt-4 pb-8"
     >
-        <NuxtLink to="/">{{ header.title }}</NuxtLink>
-        <div>
-            <span>{{ time }}</span>
-        </div>
+        <NuxtLink
+            to="/"
+            class="py-4 text-sm relative group"
+        >
+            <span>{{ header.title }}</span>
+            <span
+                v-if="route.path !== '/'"
+                class="absolute transition-all opacity-0 -left-3.5 duration-200 group-hover:opacity-100 group-hover:-left-4"
+            >
+                <Icon name="mdi:arrow-left" />
+            </span>
+        </NuxtLink>
+
+        <ul>
+            <li>
+                <NuxtLink
+                    v-for="link in headerLinks"
+                    :key="link.title"
+                    :to="link.url"
+                    class="mr-2 p-1 text-sm transition-colors duration-100 hover:text-pink-500"
+                    exact-active-class="text-pink-500"
+                >
+                    {{ link.title }}
+                </NuxtLink>
+            </li>
+        </ul>
     </div>
 </template>
 <script setup>
 const { header } = useAppConfig();
+const route = useRoute();
 
+const headerLinks = [
+    { title: "Articles", url: "/articles" },
+    { title: "Projects", url: "/projects" },
+    { title: "About", url: "/about" },
+];
 const time = ref("");
 let intervalId;
 

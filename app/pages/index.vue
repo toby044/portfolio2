@@ -1,29 +1,17 @@
 <template>
-    <div>
-        <h1 class="font-bold text-3xl mb-4">Front page</h1>
-        <NuxtLink
-            v-if="articles?.length > 0"
-            to="/articles"
-            class="flex gap-1.5 items-center text-xl w-fit hover:underline"
-        >
-            <span>Articles</span>
-            <Icon name="material-symbols:arrow-right-alt-rounded" />
-        </NuxtLink>
-        <NuxtLink
-            v-if="projects?.length > 0"
-            to="/projects"
-            class="flex gap-1.5 items-center text-xl w-fit hover:underline"
-        >
-            <span>Projects</span>
-            <Icon name="material-symbols:arrow-right-alt-rounded" />
-        </NuxtLink>
+    <div class="grid grid-cols-1 gap-8">
+        <div>
+            <p class="text-sm">
+                Developer based in Vejle, Denmark, excited about crafting great
+                user experiences and functioning frontends. I'm into
+                TailwindCSS, creative problem-solving, table tennis, and making
+                good food for the soul.
+            </p>
+        </div>
+        <Skills />
+        <Socials />
+        <Recommendations />
+        <!-- Primary technologies? -->
     </div>
 </template>
-<script setup>
-const { data: articles } = await useAsyncData("articles", () =>
-    queryCollection("article").all()
-);
-const { data: projects } = await useAsyncData("projects", () =>
-    queryCollection("project").all()
-);
-</script>
+<script setup></script>

@@ -13,22 +13,24 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
+    '@vueuse/nuxt',
   ],
+  fonts: {
+    families: [
+      {
+        name: 'Inter',
+        provider: 'google',
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        italic: true
+      }
+    ]
+  },
   css: ['~/assets/css/main.css'],
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
     }
   },
-  // components: {
-  //   dirs: [
-  //     {
-  //       path: "~/components/global",
-  //       global: true
-  //     },
-  //     "~/components"
-  //   ]
-  // },
   vite: {
     plugins: [
       tailwindcss(),
