@@ -9,7 +9,7 @@
                 :to="item.url"
                 class="flex items-center gap-0.5 hover:underline"
             >
-                <Icon name="material-symbols:arrow-left-alt-rounded" />
+                <Icon name="mdi-arrow-left" />
                 <span>{{ item.title }}</span>
             </NuxtLink>
         </template>
