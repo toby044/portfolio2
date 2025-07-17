@@ -18,9 +18,6 @@ const skills = [
     "Vue.js",
     "Nuxt.js",
     "TailwindCSS",
-    "HTML",
-    "CSS",
-    "PHP",
     "Laravel",
     "MongoDB",
     "Node.js",
@@ -28,5 +25,6 @@ const skills = [
     "REST APIs",
     "Responsive Design",
     "Accessibility (a11y)",
+    "Conventional Commits",
 ];
 </script>
