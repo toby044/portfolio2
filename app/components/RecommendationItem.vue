@@ -1,12 +1,12 @@
 <template>
     <div class="">
         <span
-            class="h-[30dvh] overflow-scroll s-recommendation-rich-text text-sm block border-b border-gray-200 pt-2 pb-4"
+            class="h-[30dvh] overflow-scroll s-recommendation-rich-text text-sm block border-b border-gray-200 pt-4 pb-4 pr-2"
             v-html="recommendation.what[lang]"
         ></span>
         <button
             @click="switchLang"
-            class="cursor-pointer text-blue-500 text-xs block ml-auto my-3"
+            class="cursor-pointer text-blue-500 text-xs block ml-auto my-2.5"
             :aria-label="`Set language to ${lang === 'en' ? 'Danish' : 'English'}`"
         >
             {{ lang === "da" ? "en" : "da" }}

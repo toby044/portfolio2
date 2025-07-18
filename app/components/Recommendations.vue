@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 gap-2">
+    <div class="grid grid-cols-1">
         <div
             class="flex justify-between items-end pb-2 border-b border-gray-300"
         >
@@ -96,7 +96,8 @@ const recommendations = [
 .fade-out-in-leave-active {
     transition: all 0.3s ease;
 }
-.fade-out-in-leave-to,.fade-out-in-enter-from  {
+.fade-out-in-leave-to,
+.fade-out-in-enter-from {
     opacity: 0;
     transform: translateY(2px);
 }

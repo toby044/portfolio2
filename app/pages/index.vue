@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-1 gap-8 pb-4">
+    <div class="grid grid-cols-1 gap-6 pb-4">
         <p class="text-sm text-gray-500 italic">
             !Disclaimer: this project is new and is still under development, any
             questions can be directed to my mail in the footer.
