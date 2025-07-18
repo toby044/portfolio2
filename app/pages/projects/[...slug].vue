@@ -6,8 +6,12 @@
             :description="page?.description"
             :crumbs="[
                 {
-                    title: 'Articles',
-                    url: '/articles',
+                    title: 'Home',
+                    url: '/',
+                },
+                {
+                    title: 'Projects',
+                    url: '/projects',
                 },
             ]"
         />
@@ -22,10 +26,11 @@ const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
     return queryCollection("project").path(route.path).first();
 });
+
 if (!page.value) {
     throw createError({
         statusCode: 404,
-        statusMessage: "Page not found",
+        statusMessage: `Page not found for path: ${route.path}`,
     });
 }
 </script>

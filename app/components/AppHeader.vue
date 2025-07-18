@@ -34,11 +34,11 @@
 const { header } = useAppConfig();
 const route = useRoute();
 
-// const headerLinks = [
-//     { title: "Articles", url: "/articles" },
-//     { title: "Projects", url: "/projects" },
-//     { title: "About", url: "/about" },
-// ];
+const headerLinks = [
+    { title: "Articles", url: "/articles" },
+    { title: "Projects", url: "/projects" },
+    { title: "About", url: "/about" },
+];
 const time = ref("");
 let intervalId;
 
