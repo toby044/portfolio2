@@ -1,6 +1,6 @@
 <template>
     <div>
-        <BreadCrumb :crumbs="[{ title: 'Forside', url: '/' }]" />
+        <BreadCrumb :crumbs="[{ title: 'Home', url: '/' }]" />
         <ul>
             <li
                 v-for="item in articles"
