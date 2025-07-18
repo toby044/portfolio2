@@ -7,9 +7,8 @@
             <NuxtLink
                 v-if="item?.title && item?.url"
                 :to="item.url"
-                class="inline-flex items-center text-xs gap-0.5  hover:underline"
+                class="inline-flex items-center text-xs gap-0.5 hover:underline"
             >
-                <!-- <Icon v-if="index === 0" name="mdi-arrow-left" size="0.8em" /> -->
                 <span>{{ item.title }}</span>
             </NuxtLink>
             <span
