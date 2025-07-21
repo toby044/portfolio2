@@ -1,9 +1,10 @@
 <template>
-    <div class="max-w-[65ch] mx-auto">
-        <AppHeader />
-        <div class="min-h-[80vh] ">
+    <div class="">
+        <AsideMenu />
+        <!-- <AppHeader /> -->
+        <div class="ml-[var(--dynamic-site-header-height)]">
             <slot />
         </div>
-        <AppFooter />
+        <!-- <AppFooter /> -->
     </div>
 </template>

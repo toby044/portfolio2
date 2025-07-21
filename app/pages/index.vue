@@ -12,9 +12,9 @@
                 good food for the soul.
             </p>
         </div>
-        <Skills />
+        <!-- <Skills />
         <Socials />
-        <Recommendations />
+        <Recommendations /> -->
         <!-- Primary technologies? -->
     </div>
 </template>
