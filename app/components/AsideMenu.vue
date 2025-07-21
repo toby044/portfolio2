@@ -8,10 +8,12 @@
             v-for="(item, idx) in menuItems"
             :to="item.url"
             :key="idx"
-            class="c-aside-menu-link flex grow items-center justify-center p-4"
+            class="c-aside-menu-link tracking-[-0.2px] transition-colors duration-200 font-semibold flex grow items-center justify-center p-4"
             :class="{
                 'rounded-full ': idx !== 1,
+                'c-aside-menu-link--isactive': idx === activeIdx,
             }"
+            @click="handleMove"
         >
             <span
                 class="text-white"
@@ -23,38 +25,49 @@
     </div>
 </template>
 <script setup>
+// For testing color modes
+// const route = useRoute();
+// watch(
+//     () => route.path,
+//     async (newPath) => {
+//         if (import.meta.client) {
+//             await nextTick();
+//             if (newPath === "/projects") {
+//                 document.documentElement.style.setProperty(
+//                     "--color-theme",
+//                     "100, 111, 88"
+//                 );
+//             } else if (newPath === "/articles") {
+//                 document.documentElement.style.setProperty(
+//                     "--color-theme",
+//                     "0, 0, 255"
+//                 );
+//             } else {
+//                 document.documentElement.style.setProperty(
+//                     "--color-theme",
+//                     "239, 70, 92"
+//                 );
+//             }
+//         }
+//     },
+//     { immediate: true }
+// );
+
 const route = useRoute();
-watch(
-    () => route.path,
-    async (newPath) => {
-        if (import.meta.client) {
-            await nextTick();
-            if (newPath === "/projects") {
-                document.documentElement.style.setProperty(
-                    "--color-theme",
-                    "100, 111, 88"
-                );
-            } else if (newPath === "/articles") {
-                document.documentElement.style.setProperty(
-                    "--color-theme",
-                    "0, 0, 255"
-                );
-            } else {
-                document.documentElement.style.setProperty(
-                    "--color-theme",
-                    "239, 70, 92"
-                );
-            }
-        }
-    },
-    { immediate: true }
-);
+const activeIdx = computed(() => {
+    return menuItems.findIndex(item => route.path === item.url || (item.url !== '/' && route.path.startsWith(item.url)));
+});
+
 
 const menuItems = [
     { title: "About", url: "/" },
     { title: "Projects", url: "/projects" },
     { title: "Articles", url: "/articles" },
 ];
+
+function handleMove(e) {
+    console.log("Handlemove:", e);
+}
 
 function handleResize() {
     if ($el.value) {
@@ -76,6 +89,7 @@ const sizeObserver = ref(null);
 
 onMounted(() => {
     sizeObserver.value = new ResizeObserver(handleResize);
+    document.documentElement.style.setProperty("--color-theme", "239, 70, 92");
     if ($el.value) {
         sizeObserver.value.observe($el.value);
     }
@@ -88,9 +102,9 @@ onUnmounted(() => {
 </script>
 <style lang="postcss">
 .c-aside-menu-link {
-    background-color: rgb(var(--theme-bg));
+    background-color: var(--theme-bg);
 }
-.c-aside-menu-link.router-link-exact-active {
+.c-aside-menu-link.c-aside-menu-link--isactive {
     background-color: rgb(var(--color-theme));
 }
 </style>

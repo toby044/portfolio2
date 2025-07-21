@@ -1,17 +1,17 @@
 <template>
     <div class="mt-16 color-[rgb(var(--color-theme))]">
         <HeadIcon class="lg:text-[25vw] !mb-0" />
-        <span class="text-[7rem] leading-[80%] font-bold">
+        <span class="text-[8rem] leading-[80%] -tracking-[3.5px] font-bold">
             Passionate about building
             <BlocksIcon class="px-1.5 inline-block !text-[10vw]" />user-friendly
             frontends and solving
             <ProblemsIcon class="px-1.5 inline-block !text-[10vw]" />problems
             creatively
         </span>
-        <!-- <Skills />
-        <Socials />
-        <Recommendations />
-        <!-- Primary technologies? -->
+        <SectionSpacer />
+        <Testimonials />
+        <SectionSpacer />
+        <Skills />
     </div>
 </template>
 <script setup>
