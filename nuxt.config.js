@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@vueuse/nuxt',
+    'nuxt-svgo',
   ],
   fonts: {
     families: [

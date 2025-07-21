@@ -20,6 +20,7 @@
         "@vueuse/nuxt": "13.5.0",
         "better-sqlite3": "^12.2.0",
         "nuxt": "^3.17.6",
+        "nuxt-svgo": "4.2.4",
         "tailwindcss": "^4.1.11",
         "vue": "^3.5.17",
         "vue-router": "^4.5.1"
