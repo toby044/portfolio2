@@ -1,5 +1,6 @@
 <template>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <div class="grid grid-cols-1 gap-8 pb-4">
         <p class="text-sm text-gray-500 italic">
             !Disclaimer: this project is new and is still under development, any
@@ -15,6 +16,8 @@
         </div>
         <Skills />
 =======
+=======
+>>>>>>> Stashed changes
     <div class="mt-16 color-[rgb(var(--color-theme))]">
         <HeadIcon class="lg:text-[25vw] !mb-0" />
         <span class="text-[7rem] leading-[80%] font-bold">
