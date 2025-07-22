@@ -21,14 +21,13 @@
 <script setup>
 const route = useRoute();
 
-definePageMeta({
-    pageTransition: { name: "article-page", mode: "out-in" },
-});
+// definePageMeta({
+//     pageTransition: { name: "article-page", mode: "out-in" },
+// });
 
 const { data: page } = await useAsyncData(route.path, () => {
     return queryCollection("article").path(route.path).first();
 });
-console.log(page);
 // if (!page.value) {
 //     throw createError({
 //         statusCode: 404,

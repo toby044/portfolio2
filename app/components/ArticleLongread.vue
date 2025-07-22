@@ -20,10 +20,11 @@
 const { data: articles } = await useAsyncData("article", () =>
     queryCollection("article").all()
 );
-// const router = useRouter();
-// if (articles.value && articles.value.length > 0) {
-//     router.replace(articles.value[0].path);
-// }
+const router = useRouter();
+const route = useRoute();
+if (route.path === '/article' && articles.value?.length > 0) {
+    router.replace(articles.value[0].path);
+}
 </script>
 <style lang="postcss">
 .c-article-long-read__link {

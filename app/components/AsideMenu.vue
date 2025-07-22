@@ -5,7 +5,7 @@
         style="width: max-content"
     >
         <NuxtLink
-            v-for="(item, idx) in menuItems"
+            v-for="(item, idx) in computedMenuItems"
             :to="item.url"
             :key="idx"
             class="c-aside-menu-link tracking-[-0.2px] transition-colors duration-200 font-semibold flex grow items-center justify-center p-4"
@@ -19,7 +19,7 @@
                 class="text-white"
                 style="writing-mode: vertical-rl; transform: rotate(180deg)"
             >
-                {{ item.title }}
+                {{ item.title }}{{ activeIdx }}
             </span>
         </NuxtLink>
     </div>
@@ -53,17 +53,41 @@
 //     { immediate: true }
 // );
 
-const route = useRoute();
-const activeIdx = computed(() => {
-    return menuItems.findIndex(item => route.path === item.url || (item.url !== '/' && route.path.startsWith(item.url)));
-});
-
+const { data: articles } = await useAsyncData("article", () =>
+    queryCollection("article").all()
+);
+const router = useRouter();
+if (articles.value?.length > 0) {
+    router.replace(articles.value[0].path);
+}
 
 const menuItems = [
     { title: "About", url: "/" },
     { title: "Projects", url: "/projects" },
     { title: "Articles", url: "/article" },
 ];
+
+const route = useRoute();
+const activeIdx = computed(() =>
+    menuItems.findIndex(item =>
+        item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)
+    )
+);
+
+const computedMenuItems = computed(() => {
+    const tempmenuItems = [
+        { title: "About", url: "/" },
+        { title: "Projects", url: "/projects" },
+    ];
+    if (articles.value?.length > 0) {
+        return [
+            ...tempmenuItems,
+            { title: "Articles", url: articles.value[0].path },
+        ];
+    } else {
+        return [...tempmenuItems, { title: "Articles", url: "/article" }];
+    }
+});
 
 function handleMove(e) {
     console.log("Handlemove:", e);

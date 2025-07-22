@@ -1,10 +1,13 @@
 <template>
     <div class="bg-[#D3D5DF]">
         <NuxtLayout>
-            <NuxtPage />
+            <NuxtPage :transition="transition" />
         </NuxtLayout>
     </div>
 </template>
+<script setup>
+const transition = useState("page-transition");
+</script>
 <style>
 .page-enter-active,
 .page-leave-active {
@@ -17,24 +20,6 @@
 .page-leave-to {
     transform: translateY(-30dvh);
     opacity: 0;
-}
-
-.article-enter-active,
-.article-leave-active {
-    transition: all 0.4s var(--easing-ease-slow);
-    .c-article-long-read {
-        transition: all 0.4s var(--easing-ease-slow);
-    }
-}
-.article-enter-from {
-    transform: translateY(30dvh);
-    opacity: 0;
-}
-.article-leave-to {
-    .c-article-long-read {
-        transform: translateY(-30dvh);
-        opacity: 0;
-    }
 }
 
 .article-page-enter-active,
