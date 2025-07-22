@@ -16,14 +16,17 @@ In web development, this can be useful in cases where **uniform randomness looks
 
 ## Implementation
 
-```js [bates-shuffle]
-function batesShuffle (n, samples = 3) {
-  return Array.from({ length: n}, (_,i) => ({
-    index: i,
-    value: Array.from({ length: samples }, Math.random)
-      .reduce((a, b) => a + b)
-      .sort((a, b) => a.value - b.value)
-      .map(item => item.index);
+```js
+function batesShuffle(n, samples = 3) {
+    return Array.from({ length: n }, (_, i) => ({
+        index: i,
+        value:
+            Array.from({ length: samples }, Math.random).reduce(
+                (a, b) => a + b
+            ) / samples,
+    }))
+        .sort((a, b) => a.value - b.value)
+        .map((item) => item.index);
 }
 ```
 
