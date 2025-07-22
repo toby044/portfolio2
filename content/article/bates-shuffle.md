@@ -16,19 +16,6 @@ In web development, this can be useful in cases where **uniform randomness looks
 
 ## Implementation
 
-```js [bates-shuffle.js]
-
-function batesShuffle(n, samples = 3) {
-    return Array.from({ length: n }, (_, i) => ({
-        index: i,
-        value: Array.from({ length: samples }, Math.random)
-        .reduce((a, b) => a + b) / samples,
-  }))
-    .sort((a, b) => a.value - b.value)
-    .map(item => item.index);
-}
-```
-
 Here, each index is given an averaged “random value” that dictates its position. More samples = smoother randomness.
 
 ## When should you use it?
