@@ -16,7 +16,8 @@ In web development, this can be useful in cases where **uniform randomness looks
 
 ## Implementation
 
-```js
+::code-block
+```js [bates-shuffle]
 function batesShuffle(n, samples = 3) {
     return Array.from({ length: n }, (_, i) => ({
         index: i,
@@ -29,6 +30,7 @@ function batesShuffle(n, samples = 3) {
         .map((item) => item.index);
 }
 ```
+::
 
 Here, each index is given an averaged “random value” that dictates its position. More samples = smoother randomness.
 
