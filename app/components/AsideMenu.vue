@@ -89,7 +89,6 @@ const sizeObserver = ref(null);
 
 onMounted(() => {
     sizeObserver.value = new ResizeObserver(handleResize);
-    document.documentElement.style.setProperty("--color-theme", "239, 70, 92");
     if ($el.value) {
         sizeObserver.value.observe($el.value);
     }
