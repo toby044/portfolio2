@@ -37,7 +37,7 @@
 //                     "--color-theme",
 //                     "100, 111, 88"
 //                 );
-//             } else if (newPath === "/articles") {
+//             } else if (newPath === "/article") {
 //                 document.documentElement.style.setProperty(
 //                     "--color-theme",
 //                     "0, 0, 255"
@@ -62,7 +62,7 @@ const activeIdx = computed(() => {
 const menuItems = [
     { title: "About", url: "/" },
     { title: "Projects", url: "/projects" },
-    { title: "Articles", url: "/articles" },
+    { title: "Articles", url: "/article" },
 ];
 
 function handleMove(e) {
