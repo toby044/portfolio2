@@ -1,7 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
     const transition = useState('page-transition', () => ({
         name: 'default',
-        mode: 'out-in',
     }))
 
     const isSlug = (r) => /^\/article\/.+/.test(r.path)

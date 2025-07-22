@@ -11,7 +11,7 @@ const transition = useState("page-transition");
 <style>
 .page-enter-active,
 .page-leave-active {
-    transition: all 1s var(--easing-ease-slow);
+    transition: all 0.4s var(--easing-ease-slow);
 }
 .page-enter-from {
     transform: translateY(30dvh);
