@@ -1,21 +1,21 @@
 <template>
-    <div class="grid grid-cols-1 gap-6 pb-4">
-        <p class="text-sm text-gray-500 italic">
-            !Disclaimer: this project is new and is still under development, any
-            questions can be directed to my mail in the footer.
-        </p>
-        <div>
-            <p class="text-sm">
-                Developer based in Vejle, Denmark, excited about crafting great
-                user experiences and functioning frontends. I'm into
-                TailwindCSS, creative problem-solving, table tennis, and making
-                good food for the soul.
-            </p>
-        </div>
-        <!-- <Skills />
-        <Socials />
-        <Recommendations /> -->
-        <!-- Primary technologies? -->
+    <div class="mt-16 color-[rgb(var(--color-theme))]">
+        <HeadIcon class="lg:text-[25vw] !mb-0" />
+        <span class="text-[8rem] leading-[80%] -tracking-[3.5px] font-bold">
+            Passionate about building
+            <BlocksIcon class="px-1.5 inline-block !text-[10vw]" />user-friendly
+            frontends and solving
+            <ProblemsIcon class="px-1.5 inline-block !text-[10vw]" />problems
+            creatively
+        </span>
+        <SectionSpacer />
+        <Testimonials />
+        <SectionSpacer />
+        <Skills />
     </div>
 </template>
-<script setup></script>
+<script setup>
+import HeadIcon from "~/assets/svgs/head.svg";
+import BlocksIcon from "~/assets/svgs/blocks.svg";
+import ProblemsIcon from "~/assets/svgs/problems.svg";
+</script>

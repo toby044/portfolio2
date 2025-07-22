@@ -1,61 +1,64 @@
 <template>
-    <div
-        class="w-full flex justify-between items-center gap-4 max-w-[65ch] mx-auto pt-4 pb-8"
-    >
-        <NuxtLink
-            to="/"
-            class="py-4 text-sm relative group"
-        >
-            <span>{{ header.title }}</span>
-            <span
-                v-if="route.path !== '/'"
-                class="absolute transition-all opacity-0 -left-3.5 duration-200 group-hover:opacity-100 group-hover:-left-4"
-            >
-                <Icon name="mdi:arrow-left" />
-            </span>
-        </NuxtLink>
-
-        <ul v-if="headerLinks?.length > 0">
+    <div class="h-[25dvh] flex justify-between">
+        <span class="font-semibold">Tobias Olesen</span>
+        <ul class="flex gap-1 transition-colors duration-200">
             <li>
-                <NuxtLink
-                    v-for="link in headerLinks"
-                    :key="link.title"
-                    :to="link.url"
-                    class="mr-2 last:mr-0 p-1 text-sm transition-colors duration-100 hover:text-pink-500"
-                    exact-active-class="text-pink-500"
+                <a
+                    href="mailto:tobiasnolesen@gmail.com"
+                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl font-semibold"
                 >
-                    {{ link.title }}
-                </NuxtLink>
+                    <span> Email </span>
+                    <Icon
+                        name="material-symbols:send-outline"
+                        size="24px"
+                        class="transition-transform duration-300 group-hover:translate-x-0.5"
+                    />
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/resume.pdf"
+                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl font-semibold"
+                    download
+                >
+                    <span>Download resume</span>
+                    <Icon
+                        name="mdi:arrow-down"
+                        size="24px"
+                        class="group-hover:translate-y-0.5 transition-transform duration-300"
+                    />
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/toby044"
+                    target="_blank"
+                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl font-semibold"
+                >
+                    <span>Github</span>
+                    <Icon
+                        name="mdi:arrow-top-right"
+                        size="24px"
+                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                    />
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/tobias-olesen-097b61167/"
+                    target="_blank"
+                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl"
+                >
+                    <span>LinkedIn</span>
+                    <Icon
+                        name="mdi:arrow-top-right"
+                        size="24px"
+                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                    />
+                </a>
             </li>
         </ul>
     </div>
 </template>
 <script setup>
-const { header } = useAppConfig();
-const route = useRoute();
-
-const headerLinks = [
-    { title: "Articles", url: "/articles" },
-    { title: "Projects", url: "/projects" },
-    { title: "About", url: "/about" },
-];
-const time = ref("");
-let intervalId;
-
-function updateTime() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, "0");
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    const seconds = now.getSeconds().toString().padStart(2, "0");
-    time.value = `${hours}:${minutes}:${seconds}`;
-}
-
-onMounted(() => {
-    updateTime();
-    intervalId = setInterval(updateTime, 1000);
-});
-
-onUnmounted(() => {
-    clearInterval(intervalId);
-});
 </script>

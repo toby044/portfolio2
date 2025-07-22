@@ -1,27 +1,20 @@
 <template>
-    <div>
-        <PageHeader
+    <NuxtLayout name="article-layout">
+        <span class="text-xl font-semibold"></span>
+        <h1
             v-if="page?.title"
-            :title="page?.title"
-            :description="page?.description"
-            :crumbs="[
-                {
-                    title: 'Home',
-                    url: '/',
-                },
-                {
-                    title: 'Articles',
-                    url: '/articles',
-                },
-            ]"
-        />
+            class="text-9xl -tracking-[3.5px] leading-[80%] font-semibold mb-10"
+        >
+            {{ page.title }}
+        </h1>
+        <pre>{{ page }}</pre>
         <ContentRenderer
             v-if="page && page.body"
             :value="page"
         />
-    </div>
+    </NuxtLayout>
 </template>
-<script lang="ts" setup>
+<script setup>
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
     return queryCollection("article").path(route.path).first();

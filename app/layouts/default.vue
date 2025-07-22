@@ -1,10 +1,10 @@
 <template>
-    <div class="">
-        <AsideMenu />
-        <!-- <AppHeader /> -->
-        <div class="ml-[var(--dynamic-site-header-height)]">
+    <div class="min-h-screen">
+        <div class="ml-[var(--dynamic-site-header-height)] p-16">
+            <AsideMenu />
+            <AppHeader />
             <slot />
+            <!-- <AppFooter /> -->
         </div>
-        <!-- <AppFooter /> -->
     </div>
 </template>

@@ -1,5 +1,12 @@
 @import "tailwindcss";
+@import "../fonts/fonts.css";
 
 * {
-    font-family: "Inter", sans-serif;
+    font-family: "Switzer", sans-serif;
+}
+
+body {
+    --color-theme: 239, 70, 92;
+    --theme-bg: rgba(var(--color-theme), 0.07);
+    color: rgb(var(--color-theme));
 }
