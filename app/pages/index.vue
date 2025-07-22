@@ -3,10 +3,12 @@
         <HeadIcon class="lg:text-[25vw] !mb-0" />
         <span class="text-[8rem] leading-[80%] -tracking-[3.5px] font-bold">
             Passionate about building
-            <BlocksIcon class="px-1.5 inline-block !text-[10vw]" />user-friendly
-            frontends and solving
-            <ProblemsIcon class="px-1.5 inline-block !text-[10vw]" />problems
-            creatively
+            <BlocksIcon
+                class="px-1.5 align-middle inline-block h-[1em] w-auto"
+            />user-friendly frontends and solving
+            <ProblemsIcon
+                class="px-1.5 align-middle inline-block h-[1em] w-auto"
+            />problems creatively
         </span>
         <SectionSpacer />
         <Testimonials />
