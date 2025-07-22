@@ -1,1 +1,0 @@
-import{_ as t,d as n,g as o,e as c,H as a}from"./Dh-Xi1t0.js";const _={};function r(s,l){const e=a;return c(),n("div",null,[o(e,{name:"article-layout"})])}const d=t(_,[["render",r]]);export{d as default};
