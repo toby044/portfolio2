@@ -19,7 +19,7 @@
                 @click="handleMove"
             >
                 <span
-                    class="relative z-10 text-white pointer-events-none"
+                    class="relative z-10 pointer-events-none"
                     style="writing-mode: vertical-rl; transform: rotate(180deg)"
                 >
                     {{ item.title }}
@@ -142,8 +142,11 @@ onUnmounted(() => {
     border-radius: 0px;
 }
 
-/*
+.c-aside-menu-link {
+    color: rgb(var(--color-theme));
+}
+
 .c-aside-menu-link.c-aside-menu-link--isactive {
-    background-color: rgb(var(--color-theme));
-} */
+    color: white;
+}
 </style>
