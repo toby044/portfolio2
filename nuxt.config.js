@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page'}
+    pageTransition: { name: 'page' }
   },
   future: {
     compatibilityVersion: 4,
@@ -33,6 +33,13 @@ export default defineNuxtConfig({
   content: {
     preview: {
       api: 'https://api.nuxt.studio',
+    },
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-light-high-contrast"
+        }
+      }
     }
   },
   vite: {

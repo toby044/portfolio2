@@ -1,58 +1,43 @@
 <template>
     <div
-        class="fixed top-0 left-0 h-screen flex flex-col justify-between items-center"
+        class="fixed top-0 left-0 h-screen"
         ref="$el"
         style="width: max-content"
     >
-        <NuxtLink
-            v-for="(item, idx) in computedMenuItems"
-            :to="item.url"
-            :key="idx"
-            class="c-aside-menu-link transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
-            :class="{
-                'rounded-full ': idx !== 1,
-                'c-aside-menu-link--isactive': idx === activeIdx,
-            }"
-            @click="handleMove"
+        <div
+            class="relative h-full bg-[#D3D5DF] flex flex-col justify-between items-center"
         >
-            <span
-                class="text-white"
-                style="writing-mode: vertical-rl; transform: rotate(180deg)"
+            <NuxtLink
+                v-for="(item, idx) in computedMenuItems"
+                :to="item.url"
+                :key="idx"
+                class="c-aside-menu-link h-1/3 transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
+                :class="{
+                    'rounded-full ': idx !== 1,
+                    'c-aside-menu-link--isactive': idx === activeIdx,
+                }"
+                @click="handleMove"
             >
-                {{ item.title }}
-            </span>
-        </NuxtLink>
+                <span
+                    class="relative z-10 text-white"
+                    style="writing-mode: vertical-rl; transform: rotate(180deg)"
+                >
+                    {{ item.title }}
+                </span>
+            </NuxtLink>
+        </div>
+        <div
+            class="c-aside-menu__indicator"
+            :class="{
+                'c-aside-menu__indicator--rounded': activeIdx !== 1,
+            }"
+            :style="{
+                ...indicatorStyle,
+            }"
+        ></div>
     </div>
 </template>
 <script setup>
-// For testing color modes
-// const route = useRoute();
-// watch(
-//     () => route.path,
-//     async (newPath) => {
-//         if (import.meta.client) {
-//             await nextTick();
-//             if (newPath === "/projects") {
-//                 document.documentElement.style.setProperty(
-//                     "--color-theme",
-//                     "100, 111, 88"
-//                 );
-//             } else if (newPath === "/article") {
-//                 document.documentElement.style.setProperty(
-//                     "--color-theme",
-//                     "0, 0, 255"
-//                 );
-//             } else {
-//                 document.documentElement.style.setProperty(
-//                     "--color-theme",
-//                     "239, 70, 92"
-//                 );
-//             }
-//         }
-//     },
-//     { immediate: true }
-// );
-
 const { data: articles } = await useAsyncData("article", () =>
     queryCollection("article").all()
 );
@@ -85,8 +70,18 @@ const computedMenuItems = computed(() => {
     }
 });
 
+const indicatorStyle = ref({ top: "0px" });
+function updateIndicator(y) {
+    indicatorStyle.value = {
+        top: y + "px",
+    };
+}
+
 function handleMove(e) {
-    console.log("Handlemove:", e);
+    const { srcElement } = e;
+    const { offsetTop } = srcElement;
+
+    updateIndicator(offsetTop);
 }
 
 function handleResize() {
@@ -123,7 +118,24 @@ onUnmounted(() => {
 .c-aside-menu-link {
     background-color: var(--theme-bg);
 }
+
+.c-aside-menu__indicator {
+    background: rgb(var(--color-theme));
+    height: 33.3333%;
+    width: 100%;
+    position: absolute;
+    border-radius: 0px;
+    transition:
+        top 1s var(--easing-ease-slow),
+        border-radius 1.5s ease-out;
+}
+
+.c-aside-menu__indicator--rounded {
+    border-radius: 500px;
+}
+
+/*
 .c-aside-menu-link.c-aside-menu-link--isactive {
     background-color: rgb(var(--color-theme));
-}
+} */
 </style>

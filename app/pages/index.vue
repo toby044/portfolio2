@@ -10,6 +10,7 @@
                 class="px-1.5 align-middle inline-block h-[1em] w-auto"
             />problems creatively
         </span>
+
         <SectionSpacer />
         <Testimonials />
         <SectionSpacer />
