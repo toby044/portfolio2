@@ -1,1 +1,0 @@
-import{_ as o,d as c,e as n,V as s}from"./p2svN4q2.js";const t={};function a(e,l){return n(),c("div",null,[s(e.$slots,"default")])}const _=Object.assign(o(t,[["render",a]]),{__name:"CodeBlock"});export{_ as default};
