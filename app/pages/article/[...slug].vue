@@ -2,14 +2,24 @@
     <div>
         <NuxtLayout name="article-layout">
             <div class="c-article-slug-container">
-                <!-- <span class="text-xl font-semibold"></span>
+                <span
+                    v-if="page?.date"
+                    class="text-xl font-semibold"
+                >
+                    {{
+                        new Date(page.date).toLocaleDateString("en-GB", {
+                            day: "2-digit",
+                            month: "long",
+                            year: "numeric",
+                        })
+                    }}
+                </span>
                 <h1
                     v-if="page?.title"
-                    class="text-9xl -tracking-[3.5px] leading-[80%] font-semibold mb-10"
+                    class="text-9xl -tracking-[3.5px] font-semibold mb-10"
                 >
                     {{ page.title }}
                 </h1>
-                <pre>{{ page }}</pre> -->
                 <ContentRenderer
                     v-if="page && page.body"
                     :value="page"
