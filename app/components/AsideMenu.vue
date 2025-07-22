@@ -19,7 +19,7 @@
                 class="text-white"
                 style="writing-mode: vertical-rl; transform: rotate(180deg)"
             >
-                {{ item.title }}{{ activeIdx }}
+                {{ item.title }}
             </span>
         </NuxtLink>
     </div>
