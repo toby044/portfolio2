@@ -107,6 +107,14 @@ onMounted(() => {
     if ($el.value) {
         sizeObserver.value.observe($el.value);
     }
+    const links = document.querySelectorAll(".c-aside-menu-link") || [];
+    if (links.length > 0) {
+        const activeLink = links[activeIdx.value];
+        if (activeLink) {
+            const { offsetTop } = activeLink;
+            updateIndicator(offsetTop);
+        }
+    }
 });
 onUnmounted(() => {
     if (sizeObserver.value) {
