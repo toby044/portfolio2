@@ -19,7 +19,7 @@
                 @click="handleMove"
             >
                 <span
-                    class="relative z-10 text-white"
+                    class="relative z-10 text-white pointer-events-none"
                     style="writing-mode: vertical-rl; transform: rotate(180deg)"
                 >
                     {{ item.title }}
