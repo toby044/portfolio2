@@ -23,12 +23,25 @@
                 <ContentRenderer
                     v-if="page && page.body"
                     :value="page"
+                    class="s-rich-text"
                 />
             </div>
         </NuxtLayout>
     </div>
 </template>
 <script setup>
+
+function batesShuffle(n, samples = 3) {
+    return Array.from({ length: n }, (_, i) => ({
+        index: i,
+        value: Array.from({ length: samples }, Math.random)
+        .reduce((a, b) => a + b) / samples,
+  }))
+    .sort((a, b) => a.value - b.value)
+    .map(item => item.index);
+}
+
+
 const route = useRoute();
 
 // definePageMeta({

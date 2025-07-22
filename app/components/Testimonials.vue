@@ -7,7 +7,7 @@
                 class="font-semibold leading-[100%] -tracking-[0.2px]"
             >
                 <span
-                    class="s-recommendation-rich-text"
+                    class="s-rich-text"
                     v-html="item.what"
                 ></span>
                 <br />
@@ -31,10 +31,3 @@ const testimonials = [
     },
 ];
 </script>
-<style lang="postcss">
-.s-recommendation-rich-text {
-    & p + p {
-        margin-top: 1rem;
-    }
-}
-</style>
