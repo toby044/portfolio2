@@ -56,10 +56,6 @@
 const { data: articles } = await useAsyncData("article", () =>
     queryCollection("article").all()
 );
-const router = useRouter();
-if (articles.value?.length > 0) {
-    router.replace(articles.value[0].path);
-}
 
 const menuItems = [
     { title: "About", url: "/" },
@@ -69,7 +65,7 @@ const menuItems = [
 
 const route = useRoute();
 const activeIdx = computed(() =>
-    menuItems.findIndex(item =>
+    menuItems.findIndex((item) =>
         item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)
     )
 );
