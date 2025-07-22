@@ -3,7 +3,7 @@
 
 
 * {
-    font-family: "Switzer", sans-serif;
+    font-family: "Switzer", sans-serif !important;
 }
 
 body {

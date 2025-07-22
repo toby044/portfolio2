@@ -8,7 +8,7 @@
             v-for="(item, idx) in computedMenuItems"
             :to="item.url"
             :key="idx"
-            class="c-aside-menu-link tracking-[-0.2px] transition-colors duration-200 font-semibold flex grow items-center justify-center p-4"
+            class="c-aside-menu-link transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
             :class="{
                 'rounded-full ': idx !== 1,
                 'c-aside-menu-link--isactive': idx === activeIdx,

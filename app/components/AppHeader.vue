@@ -47,7 +47,7 @@
                 <a
                     href="https://www.linkedin.com/in/tobias-olesen-097b61167/"
                     target="_blank"
-                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl"
+                    class="p-4 flex group items-center gap-1 bg-[var(--theme-bg)] rounded-xl font-semibold"
                 >
                     <span>LinkedIn</span>
                     <Icon

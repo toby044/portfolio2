@@ -1,5 +1,4 @@
 ---
-tags: []
 title: "Demystifying the Bates Shuffle: True Randomness"
 date: 2025-07-22T00:00:00.000Z
 ---
@@ -15,6 +14,8 @@ The Bates Shuffle is derived from statistical methods, specifically from the **B
 In web development, this can be useful in cases where **uniform randomness looks "too random"** and jarring, especially in animations, transitions, or procedural content.
 
 ## Implementation
+
+![Portfolio](/media/images/bates-shuffle.jpg)
 
 Here, each index is given an averaged “random value” that dictates its position. More samples = smoother randomness.
 

@@ -11,7 +11,7 @@
                     v-html="item.what"
                 ></span>
                 <br />
-                <span class="block">- {{ item.who.name }} <br/>{{ item.who.title }} at {{ item.from }}</span>
+                <span v-if="item?.who" class="block">- {{ item.who?.name }} <br/>{{ item.who?.title }} at {{ item.from }}</span>
             </div>
         </div>
     </div>
