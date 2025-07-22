@@ -9,8 +9,10 @@
                     <th class="py-16 border-b">Role</th>
                 </tr>
             </thead>
-            <div class="h-16" />
             <tbody>
+                <tr>
+                    <td colspan="4" class="h-16"></td>
+                </tr>
                 <tr
                     v-for="(project, idx) in projects"
                     :key="idx"

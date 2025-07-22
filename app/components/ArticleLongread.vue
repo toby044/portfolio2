@@ -17,7 +17,7 @@
     </div>
 </template>
 <script setup>
-const { data: articles } = await useAsyncData("articles", () =>
+const { data: articles } = await useAsyncData("article", () =>
     queryCollection("article").all()
 );
 </script>
