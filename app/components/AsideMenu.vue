@@ -29,7 +29,7 @@
         <div
             class="c-aside-menu__indicator"
             :class="{
-                'c-aside-menu__indicator--rounded': activeIdx !== 1,
+                'c-aside-menu__indicator--square': activeIdx === 1,
             }"
             :style="{
                 ...indicatorStyle,
@@ -124,14 +124,14 @@ onUnmounted(() => {
     height: 33.3333%;
     width: 100%;
     position: absolute;
-    border-radius: 0px;
+    border-radius: 9999px;
     transition:
         top 1s var(--easing-ease-slow),
         border-radius 1.5s ease-out;
 }
 
-.c-aside-menu__indicator--rounded {
-    border-radius: 500px;
+.c-aside-menu__indicator--square {
+    border-radius: 0px;
 }
 
 /*
