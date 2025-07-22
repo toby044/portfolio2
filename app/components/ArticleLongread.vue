@@ -17,7 +17,7 @@
     </div>
 </template>
 <script setup>
-const { data: articles } = await useAsyncData("article", () =>
+const { data: articles } = useAsyncData("article", () =>
     queryCollection("article").all()
 );
 const router = useRouter();
