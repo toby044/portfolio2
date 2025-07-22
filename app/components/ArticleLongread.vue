@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="c-article-long-read">
         <ul class="pr-10 h-fit sticky top-16 left-">
             <li
                 v-for="(item, index) in articles"
@@ -20,6 +20,10 @@
 const { data: articles } = await useAsyncData("article", () =>
     queryCollection("article").all()
 );
+// const router = useRouter();
+// if (articles.value && articles.value.length > 0) {
+//     router.replace(articles.value[0].path);
+// }
 </script>
 <style lang="postcss">
 .c-article-long-read__link {
