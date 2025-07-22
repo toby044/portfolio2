@@ -15,7 +15,7 @@ In web development, this can be useful in cases where **uniform randomness looks
 
 ## Implementation
 
-![Portfolio](/media/images/bates-shuffle.jpg)
+![Portfolio](/media/img/bates-shuffle.jpg)
 
 Here, each index is given an averaged “random value” that dictates its position. More samples = smoother randomness.
 
