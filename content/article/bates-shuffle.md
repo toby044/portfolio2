@@ -1,6 +1,7 @@
 ---
 title: "Demystifying the Bates Shuffle: True Randomness"
 date: 2025-07-22T00:00:00.000Z
+tags: []
 ---
 
 When developers hear "shuffle", we usually think of the Fisher-Yates algorithm — and rightly so. It’s efficient, unbiased, and has been the gold standard for decades. But what if we need randomness that feels more *natural*?
@@ -15,7 +16,16 @@ In web development, this can be useful in cases where **uniform randomness looks
 
 ## Implementation
 
-![Portfolio](/media/img/bates-shuffle.jpg)
+```js [bates-shuffle]
+function batesShuffle (n, samples = 3) {
+  return Array.from({ length: n}, (_,i) => ({
+    index: i,
+    value: Array.from({ length: samples }, Math.random)
+      .reduce((a, b) => a + b)
+      .sort((a, b) => a.value - b.value)
+      .map(item => item.index);
+}
+```
 
 Here, each index is given an averaged “random value” that dictates its position. More samples = smoother randomness.
 
