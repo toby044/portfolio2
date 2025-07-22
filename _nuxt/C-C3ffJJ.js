@@ -1,0 +1,1 @@
+import{_ as o,d as c,e as n,V as s}from"./Dh-Xi1t0.js";const t={};function a(e,l){return n(),c("div",null,[s(e.$slots,"default")])}const _=Object.assign(o(t,[["render",a]]),{__name:"CodeBlock"});export{_ as default};

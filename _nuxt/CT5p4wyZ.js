@@ -1,1 +1,0 @@
-import{_ as s,d as r,e as n,V as o}from"./537n3VLQ.js";const t={};function a(e,c){return n(),r("li",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",a]]),{__name:"ProseLi"});export{_ as default};
