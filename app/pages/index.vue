@@ -12,9 +12,9 @@
         </span>
 
         <SectionSpacer />
-        <Testimonials />
-        <SectionSpacer />
         <Skills />
+        <SectionSpacer />
+        <Testimonials />
     </div>
 </template>
 <script setup>
