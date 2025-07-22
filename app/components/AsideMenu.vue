@@ -127,7 +127,7 @@ onUnmounted(() => {
     border-radius: 9999px;
     transition:
         top 1s var(--easing-ease-slow),
-        border-radius 1.5s ease-out;
+        border-radius 1.5s var(--easing-ease-slow);
 }
 
 .c-aside-menu__indicator--square {
