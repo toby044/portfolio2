@@ -6,7 +6,26 @@
     </div>
 </template>
 <script setup>
+import Lenis from "@studio-freight/lenis";
 const transition = useState("page-transition");
+
+let lenis;
+
+const onUpdate = () => {
+    window.requestAnimationFrame(() => {
+        lenis.raf(delta);
+    });
+};
+
+onMounted(() => {
+    lenis = new Lenis({
+        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+        duration: 1.25,
+        autoResize: true,
+        smooth: true,
+        smoothTouch: false,
+    });
+});
 </script>
 <style>
 .page-enter-active,
