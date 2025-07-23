@@ -11,10 +11,9 @@ const transition = useState("page-transition");
 
 let lenis;
 
-const onUpdate = () => {
-    window.requestAnimationFrame(() => {
-        lenis.raf(delta);
-    });
+const onUpdate = (delta) => {
+    window.requestAnimationFrame(onUpdate);
+    lenis.raf(delta);
 };
 
 onMounted(() => {
