@@ -25,6 +25,7 @@ onMounted(() => {
         smooth: true,
         smoothTouch: false,
     });
+    onUpdate();
 });
 </script>
 <style>
