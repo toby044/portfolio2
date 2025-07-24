@@ -27,7 +27,6 @@
         "vue-router": "^4.5.1"
     },
     "devDependencies": {
-        "shiki": "^3.8.1",
-        "@studio-freight/lenis": "^1.0.42"
+        "shiki": "^3.8.1"
     }
 }

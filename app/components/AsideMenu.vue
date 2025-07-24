@@ -26,7 +26,7 @@
                 </span>
             </NuxtLink>
         </div>
-        <div
+        <!-- <div
             class="c-aside-menu__indicator"
             :class="{
                 'c-aside-menu__indicator--square': activeIdx === 1,
@@ -34,7 +34,7 @@
             :style="{
                 ...indicatorStyle,
             }"
-        ></div>
+        ></div> -->
     </div>
 </template>
 <script setup>
@@ -125,6 +125,12 @@ onUnmounted(() => {
 <style lang="postcss">
 .c-aside-menu-link {
     background-color: var(--theme-bg);
+    color: rgb(var(--color-theme));
+}
+
+.c-aside-menu-link.c-aside-menu-link--isactive {
+    color: white;
+    background-color: rgb(var(--color-theme));
 }
 
 .c-aside-menu__indicator {
@@ -140,13 +146,5 @@ onUnmounted(() => {
 
 .c-aside-menu__indicator--square {
     border-radius: 0px;
-}
-
-.c-aside-menu-link {
-    color: rgb(var(--color-theme));
-}
-
-.c-aside-menu-link.c-aside-menu-link--isactive {
-    color: white;
 }
 </style>
