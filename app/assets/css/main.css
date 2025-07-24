@@ -7,7 +7,7 @@
 }
 
 body {
-    --color-theme: 53, 45, 72;
+    /* --color-theme: 53, 45, 72; */
     --theme-bg: rgba(var(--color-theme), 0.07);
     color: rgb(var(--color-theme));
 }

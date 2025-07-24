@@ -51,6 +51,36 @@ const menuItems = [
 ];
 
 const route = useRoute();
+
+watch(
+    () => route.path,
+    async (newPath) => {
+        console.log(newPath);
+        if (import.meta.client) {
+            await nextTick();
+            if (newPath === "/projects") {
+                document.documentElement.style.setProperty(
+                    "--color-theme",
+                    "100, 111, 88"
+                );
+                document.documentElement.style.getPropertyPriority(
+                    "--color-theme"
+                );
+            } else if (newPath.startsWith("/article")) {
+                document.documentElement.style.setProperty(
+                    "--color-theme",
+                    "0, 0, 255"
+                );
+            } else {
+                document.documentElement.style.setProperty(
+                    "--color-theme",
+                    "239, 70, 92"
+                );
+            }
+        }
+    },
+    { immediate: true }
+);
 const activeIdx = computed(() =>
     menuItems.findIndex((item) =>
         item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)
@@ -148,8 +178,11 @@ onUnmounted(() => {
 
 .c-aside-menu-link {
     &::before {
+        opacity: 0;
         content: "";
-        transition: all 1s var(--easing-ease-slow);
+        transition:
+            transform 1s var(--easing-ease-slow),
+            opacity 0s var(--easing-ease-slow);
         position: absolute;
         top: 0;
         left: 0;
@@ -163,6 +196,7 @@ onUnmounted(() => {
 .c-aside-menu-link.c-aside-menu-link--isactive {
     color: white;
     &::before {
+        opacity: 1;
         transform: translateY(0%);
     }
 }
@@ -170,11 +204,17 @@ onUnmounted(() => {
 .c-aside-menu-link.c-aside-menu-link--beforeActive {
     &::before {
         transform: translateY(100%);
+        transition:
+            opacity 0s 1s var(--easing-ease-slow),
+            transform 1s var(--easing-ease-slow);
     }
 }
 .c-aside-menu-link.c-aside-menu-link--afterActive {
     &::before {
         transform: translateY(-100%);
+        transition:
+            opacity 0s 1s var(--easing-ease-slow),
+            transform 1s var(--easing-ease-slow);
     }
 }
 </style>
