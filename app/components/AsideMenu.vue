@@ -131,11 +131,6 @@ onUnmounted(() => {
     color: rgb(var(--color-theme));
 }
 
-.c-aside-menu-link.c-aside-menu-link--isactive {
-    color: white;
-    /* background-color: rgb(var(--color-theme)); */
-}
-
 .c-aside-menu__indicator {
     background: rgb(var(--color-theme));
     height: 33.3333%;
