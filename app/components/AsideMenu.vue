@@ -11,10 +11,12 @@
                 v-for="(item, idx) in computedMenuItems"
                 :to="item.url"
                 :key="idx"
-                class="c-aside-menu-link h-1/3 transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
+                class="c-aside-menu-link relative h-1/3 transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
                 :class="{
                     'rounded-full ': idx !== 1,
                     'c-aside-menu-link--isactive': idx === activeIdx,
+                    'c-aside-menu-link--beforeActive': idx < activeIdx,
+                    'c-aside-menu-link--afterActive': idx > activeIdx,
                 }"
                 @click="handleMove"
             >
@@ -124,13 +126,14 @@ onUnmounted(() => {
 </script>
 <style lang="postcss">
 .c-aside-menu-link {
+    overflow: hidden;
     background-color: var(--theme-bg);
     color: rgb(var(--color-theme));
 }
 
 .c-aside-menu-link.c-aside-menu-link--isactive {
     color: white;
-    background-color: rgb(var(--color-theme));
+    /* background-color: rgb(var(--color-theme)); */
 }
 
 .c-aside-menu__indicator {
@@ -146,5 +149,37 @@ onUnmounted(() => {
 
 .c-aside-menu__indicator--square {
     border-radius: 0px;
+}
+
+.c-aside-menu-link {
+    &::before {
+        content: "";
+        transition: all 1s var(--easing-ease-slow);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(0%);
+        width: 100%;
+        height: 100%;
+        background-color: rgb(var(--color-theme));
+    }
+}
+
+.c-aside-menu-link.c-aside-menu-link--isactive {
+    color: white;
+    &::before {
+        transform: translateY(0%);
+    }
+}
+
+.c-aside-menu-link.c-aside-menu-link--beforeActive {
+    &::before {
+        transform: translateY(100%);
+    }
+}
+.c-aside-menu-link.c-aside-menu-link--afterActive {
+    &::before {
+        transform: translateY(-100%);
+    }
 }
 </style>
