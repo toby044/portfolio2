@@ -10,4 +10,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
     } else {
         transition.value = { name: 'page', mode: 'out-in' }
     }
+
 })

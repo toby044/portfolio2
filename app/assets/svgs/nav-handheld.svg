@@ -1,0 +1,7 @@
+<svg width="375" height="56" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="handheldClip">
+            <path d="M97 0C112.464 0 125 12.536 125 28C125 43.464 112.464 56 97 56H28C12.536 56 0 43.464 0 28C0 12.536 12.536 0 28 0H97ZM250 56H125V0H250V56ZM347 0C362.464 0 375 12.536 375 28C375 43.464 362.464 56 347 56H278C262.536 56 250 43.464 250 28C250 12.536 262.536 0 278 0H347Z" fill="currentColor"/>
+        </clipPath>
+    </defs>
+</svg>

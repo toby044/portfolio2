@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#D3D5DF]">
+    <div class="bg-[var(--theme-background)]">
         <NuxtLayout>
             <NuxtPage :transition="transition" />
         </NuxtLayout>

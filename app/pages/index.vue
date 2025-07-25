@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-16 color-[rgb(var(--color-theme))]">
+    <div class="mt-16 color-[var(--theme-main)]">
         <HeadIcon class="lg:text-[25vw] !mb-0" />
         <span class="text-[8rem] leading-[80%] -tracking-[3.5px] font-bold">
             Passionate about building
@@ -22,3 +22,4 @@ import HeadIcon from "~/assets/svgs/head.svg";
 import BlocksIcon from "~/assets/svgs/blocks.svg";
 import ProblemsIcon from "~/assets/svgs/problems.svg";
 </script>
+
