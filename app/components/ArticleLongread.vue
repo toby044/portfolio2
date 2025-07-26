@@ -15,8 +15,9 @@
             <Transition name="longread-scroll-in">
                 <div
                     v-if="isOpen"
-                    class="fixed inset-0 top-0 left-0 z-[2] bg-[var(--theme-background)] px-6 py-20"
+                    class="fixed inset-0 top-0 left-0 z-[2] bg-[var(--theme-background)] px-6 py-20 w-screen"
                 >
+                    <span class="block mb-4">Articles</span>
                     <ul class="">
                         <li
                             v-for="(item, index) in articles"
@@ -26,7 +27,7 @@
                             <span>{{ index + 1 }}</span>
                             <NuxtLink
                                 :to="item.path"
-                                class="block hover:underline"
+                                class="block lg:no-underline hover:underline underline"
                                 >{{ item.title }}</NuxtLink
                             >
                         </li>

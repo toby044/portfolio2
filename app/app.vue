@@ -14,12 +14,26 @@ const transition = useState("page-transition");
     transition: all 0.4s var(--easing-ease-slow);
 }
 .page-enter-from {
-    transform: translateY(30dvh);
+    transform: translateX(15dvw);
     opacity: 0;
 }
 .page-leave-to {
-    transform: translateY(-30dvh);
+    transform: translateX(-15dvw);
     opacity: 0;
+}
+@media (min-width: 1024px) {
+    .page-enter-active,
+    .page-leave-active {
+        transition: all 0.4s var(--easing-ease-slow);
+    }
+    .page-enter-from {
+        transform: translateY(30dvh);
+        opacity: 0;
+    }
+    .page-leave-to {
+        transform: translateY(-30dvh);
+        opacity: 0;
+    }
 }
 
 .article-page-enter-active,
