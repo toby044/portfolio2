@@ -1,0 +1,1 @@
+import{_ as e,d as c,e as n}from"./BmXpjgBu.js";const _={},t={class:"bg-[var(--theme-main)] my-16 h-[1px] w-full"};function o(s,a){return n(),c("div",t)}const m=Object.assign(e(_,[["render",o]]),{__name:"SectionSpacer"});export{m as _};
