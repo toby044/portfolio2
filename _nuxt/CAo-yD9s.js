@@ -1,0 +1,1 @@
+import{_ as o,d as s,e as t,W as c}from"./D3ToJovg.js";const a={},n={class:"p-6 bg-[var(--theme-bg)] rounded-2xl"};function r(e,l){return t(),s("div",n,[c(e.$slots,"default")])}const d=Object.assign(o(a,[["render",r]]),{__name:"CodeBlock"});export{d as default};
