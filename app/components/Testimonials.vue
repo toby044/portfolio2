@@ -1,7 +1,7 @@
 <template>
     <div>
-        <span class="font-semibold block mb-16">Testimonials</span>
-        <div class="grid grid-cols-4 gap-6">
+        <span class="font-semibold block mb-9 lg:mb-16">Testimonials</span>
+        <div class="grid lg:grid-cols-4 gap-6">
             <div
                 v-for="(item, index) in testimonials"
                 class="font-semibold leading-[100%] -tracking-[0.2px]"

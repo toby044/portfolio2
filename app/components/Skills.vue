@@ -1,11 +1,11 @@
 <template>
     <div class="font-semibold">
-        <h2 class="block mb-16">Skills</h2>
+        <h2 class="block mb-9 lg:mb-16">Skills</h2>
         <div class="flex flex-wrap gap-1">
             <span
                 v-for="skill in skills"
                 :key="skill"
-                class="p-4 bg-[var(--theme-bg)] rounded-xl"
+                class="p-2 lg:p-4 bg-[var(--theme-background-opacity)] rounded-xl"
             >
                 {{ skill }}
             </span>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtLayout name="article-layout">
-            <div class="c-article-slug-container mt-16">
+            <div class="c-article-slug-container">
                 <span
                     v-if="page?.date"
                     class="text-xl font-semibold"
@@ -16,7 +16,7 @@
                 </span>
                 <h1
                     v-if="page?.title"
-                    class="text-9xl -tracking-[3.5px] font-semibold mb-10"
+                    class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl lg:-tracking-[1px] lg:leading-[85%] font-semibold mb-10"
                 >
                     {{ page.title }}
                 </h1>
@@ -30,7 +30,6 @@
     </div>
 </template>
 <script setup>
-
 const route = useRoute();
 const { data: page } = await useAsyncData(route.path, () => {
     return queryCollection("article").path(route.path).first();

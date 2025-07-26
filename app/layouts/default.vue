@@ -1,8 +1,8 @@
 <template>
     <div class="min-h-screen">
-        <div class="ml-[var(--dynamic-site-header-height)] p-16">
+        <div class="lg:ml-[var(--dynamic-site-header-height)] p-6 pb-16 lg:p-16">
             <AsideMenu />
-            <AppHeader />
+            <AppHeader class="hidden lg:flex" />
             <slot />
             <!-- <AppFooter /> -->
         </div>
