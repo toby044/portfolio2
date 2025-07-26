@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtLayout name="article-layout">
-            <div class="c-article-slug-container">
+            <div class="c-article-slug-container mt-16">
                 <span
                     v-if="page?.date"
                     class="text-xl font-semibold"

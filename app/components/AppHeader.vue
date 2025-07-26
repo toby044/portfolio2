@@ -11,7 +11,7 @@
                     <Icon
                         name="material-symbols:send-outline"
                         size="24px"
-                        class="transition-transform duration-300 group-hover:translate-x-0.5"
+                        class="transition-transform duration-300 ease-[var(--easing-ease-slow)] group-hover:translate-x-0.5"
                     />
                 </a>
             </li>
@@ -25,7 +25,7 @@
                     <Icon
                         name="mdi:arrow-down"
                         size="24px"
-                        class="group-hover:translate-y-0.5 transition-transform duration-300"
+                        class="group-hover:translate-y-0.5 transition-transform duration-300 ease-[var(--easing-ease-slow)]"
                     />
                 </a>
             </li>
@@ -39,7 +39,7 @@
                     <Icon
                         name="mdi:arrow-top-right"
                         size="24px"
-                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300 ease-[var(--easing-ease-slow)]"
                     />
                 </a>
             </li>
@@ -53,12 +53,11 @@
                     <Icon
                         name="mdi:arrow-top-right"
                         size="24px"
-                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300"
+                        class="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300 ease-[var(--easing-ease-slow)]"
                     />
                 </a>
             </li>
         </ul>
     </div>
 </template>
-<script setup>
-</script>
+<script setup></script>
