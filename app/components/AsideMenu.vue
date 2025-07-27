@@ -1,6 +1,6 @@
 <template>
     <div
-        class="c-aside-menu absolute lg:fixed top-0 left-0 h-fit min-w-full lg:min-w-16 lg:min-h-0 lg:h-screen"
+        class="c-aside-menu absolute lg:fixed top-0 left-0 min-h-16 h-fit min-w-full lg:min-w-16 lg:min-h-0 lg:h-screen"
         ref="$el"
         style="width: max-content"
     >
