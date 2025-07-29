@@ -7,6 +7,7 @@
 </template>
 <script setup>
 const transition = useState("page-transition");
+useColorTheme("gray");
 </script>
 <style>
 .page-enter-active,

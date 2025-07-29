@@ -73,22 +73,22 @@ const menuItems = [
 
 const route = useRoute();
 
-watch(
-    () => route.path,
-    async (newPath) => {
-        if (import.meta.client) {
-            await nextTick();
-            if (newPath === "/projects") {
-                useColorTheme("brown");
-            } else if (newPath.startsWith("/article")) {
-                useColorTheme("green");
-            } else {
-                useColorTheme("yellow");
-            }
-        }
-    },
-    { immediate: true }
-);
+// watch(
+//     () => route.path,
+//     async (newPath) => {
+//         if (import.meta.client) {
+//             await nextTick();
+//             if (newPath === "/projects") {
+//                 useColorTheme("brown");
+//             } else if (newPath.startsWith("/article")) {
+//                 useColorTheme("green");
+//             } else {
+//                 useColorTheme("yellow");
+//             }
+//         }
+//     },
+//     { immediate: true }
+// );
 const activeIdx = computed(() =>
     menuItems.findIndex((item) =>
         item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)

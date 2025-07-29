@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     build: {
       markdown: {
         highlight: {
-          theme: "github-light-high-contrast"
+          theme: "github-dark-high-contrast"
         }
       }
     }
