@@ -12,7 +12,7 @@ In Vue, the `key` is a special attribute used in `v-for` loops or when condition
 
 ### Why Use `key`?
 
-Without a `key&#x60;, Vue uses a **"patch and reuse"** strategy. This can cause issues when:
+Without a \`key\`, Vue uses a **"patch and reuse"** strategy. This can cause issues when:
 
 - Elements are reordered
 - New items are added or removed
@@ -22,6 +22,7 @@ With a `key`, Vue can accurately match old and new VNodes, ensuring correct rend
 
 ### Basic usage of key in v-for
 
+::code-block
 ```vue [TestList]
 <template>
   <ul>
@@ -39,6 +40,7 @@ const items = [
 ];
 </script>
 ```
+::
 
 ### Good practice
 
@@ -48,23 +50,13 @@ Always use a **unique and stable identifier** as a key. For example, `item.id` i
 
 Using index as key
 
+::code-block
 ```vue
-<template>
-  <ul>
-    <li v-for="item in items" :key="item.id">
-      {{ item.name }}
-    </li>
-  </ul>
-</template>
-
-<script setup>
-const items = [
-  { id: 1, name: 'Vue' },
-  { id: 2, name: 'React' },
-  { id: 3, name: 'Svelte' }
-];
-</script>
+<li v-for="(item, index) in items" :key="index">
+  {{ item.name }}
+</li>
 ```
+::
 
 Using the array index as a key can cause issues when items are reordered or removed, leading to DOM inconsistencies and bugs. Instead, use unique identifiers, which could be item.id, item.key etc.
 
