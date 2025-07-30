@@ -12,7 +12,7 @@
             class="relative h-full flex-col justify-between items-center hidden lg:flex"
         >
             <NuxtLink
-                v-for="(item, idx) in computedMenuItems"
+                v-for="(item, idx) in menuItems"
                 :to="item.url"
                 :key="idx"
                 class="c-aside-menu-link c-aside-menu-link__desktop relative w-full h-1/3 transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
@@ -36,10 +36,10 @@
             class="relative h-full w-full flex justify-between items-center lg:hidden"
         >
             <NuxtLink
-                v-for="(item, idx) in computedMenuItems"
+                v-for="(item, idx) in menuItems"
                 :to="item.url"
                 :key="idx"
-                class="c-aside-menu-link c-aside-menu-link__mobile relative w-1/3 h-full transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
+                class="c-aside-menu-link min-h-16 c-aside-menu-link__mobile relative w-1/3 h-full transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
                 :class="{
                     'rounded-full ': idx !== 1,
                     '!text-[var(--theme-background)]': activeIdx === idx,
@@ -61,14 +61,10 @@
     </div>
 </template>
 <script setup>
-const { data: articles } = await useAsyncData("article", () =>
-    queryCollection("article").all()
-);
-
 const menuItems = [
     { title: "About", url: "/" },
     { title: "Projects", url: "/projects" },
-    { title: "Articles", url: "/article" },
+    { title: "Articles", url: "/articles" },
 ];
 
 const route = useRoute();
@@ -94,21 +90,6 @@ const activeIdx = computed(() =>
         item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)
     )
 );
-
-const computedMenuItems = computed(() => {
-    const tempmenuItems = [
-        { title: "About", url: "/" },
-        { title: "Projects", url: "/projects" },
-    ];
-    if (articles.value?.length > 0) {
-        return [
-            ...tempmenuItems,
-            { title: "Articles", url: articles.value[0].path },
-        ];
-    } else {
-        return [...tempmenuItems, { title: "Articles", url: "/article" }];
-    }
-});
 
 const indicatorStyle = ref({ top: "0px" });
 function handleMove(e) {

@@ -65,11 +65,11 @@
 const { data: articles } = useAsyncData("article", () =>
     queryCollection("article").all()
 );
-const router = useRouter();
-const route = useRoute();
-if (route.path === "/article" && articles.value?.length > 0) {
-    router.replace(articles.value[0].path);
-}
+// const router = useRouter();
+// const route = useRoute();
+// if (route.path === "/article" && articles.value?.length > 0) {
+//     router.replace(articles.value[0].path);
+// }
 
 const isOpen = ref(false);
 </script>
