@@ -38,10 +38,10 @@ const { data: page } = await useAsyncData(`article-${slug}`, () =>
     queryCollection("article").path(`/articles/${slug}`).first()
 );
 
-if (!page.value) {
-    throw createError({
-        statusCode: 404,
-        statusMessage: `Page not found for slug: ${slug}`,
-    });
-}
+// if (!page.value) {
+//     throw createError({
+//         statusCode: 404,
+//         statusMessage: `Page not found for slug: ${slug}`,
+//     });
+// }
 </script>
