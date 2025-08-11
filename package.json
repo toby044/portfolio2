@@ -20,6 +20,7 @@
         "@unhead/vue": "^2.0.12",
         "@vueuse/nuxt": "13.5.0",
         "better-sqlite3": "^12.2.0",
+        "gsap": "^3.13.0",
         "nuxt": "^3.17.6",
         "nuxt-svgo": "4.2.4",
         "tailwindcss": "^4.1.11",

@@ -4,8 +4,8 @@
         ref="$el"
         style="width: max-content"
     >
-        <DesktopAsideClip class="hidden lg:block" />
-        <MobileAsideClip class="block lg:hidden" />
+        <!-- <DesktopAsideClip class="hidden lg:block" />
+        <MobileAsideClip class="block lg:hidden" /> -->
 
         <!-- Desktop -->
         <div
@@ -18,7 +18,8 @@
                 class="c-aside-menu-link c-aside-menu-link__desktop relative w-full h-1/3 transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
                 :class="{
                     'rounded-full ': idx !== 1,
-                    '!text-[var(--theme-background)]': activeIdx === idx,
+                    '!text-[var(--theme-background)] !bg-[var(--theme-main)]':
+                        activeIdx === idx,
                 }"
                 @click="handleMove"
             >
@@ -42,7 +43,8 @@
                 class="c-aside-menu-link min-h-16 c-aside-menu-link__mobile relative w-1/3 h-full transition-colors duration-200 font-medium flex grow items-center justify-center p-4"
                 :class="{
                     'rounded-full ': idx !== 1,
-                    '!text-[var(--theme-background)]': activeIdx === idx,
+                    '!text-[var(--theme-background)] !bg-[var(--theme-main)]':
+                        activeIdx === idx,
                 }"
                 @click="handleMove"
             >
@@ -52,12 +54,12 @@
             </NuxtLink>
         </div>
 
-        <div
+        <!-- <div
             class="c-aside-menu__indicator c-aside-menu__indicator--square pointer-events-none"
             :style="{
                 ...indicatorStyle,
             }"
-        ></div>
+        ></div> -->
     </div>
 </template>
 <script setup>
@@ -68,23 +70,6 @@ const menuItems = [
 ];
 
 const route = useRoute();
-
-// watch(
-//     () => route.path,
-//     async (newPath) => {
-//         if (import.meta.client) {
-//             await nextTick();
-//             if (newPath === "/projects") {
-//                 useColorTheme("brown");
-//             } else if (newPath.startsWith("/article")) {
-//                 useColorTheme("green");
-//             } else {
-//                 useColorTheme("yellow");
-//             }
-//         }
-//     },
-//     { immediate: true }
-// );
 const activeIdx = computed(() =>
     menuItems.findIndex((item) =>
         item.url === "/" ? route.path === "/" : route.path.startsWith(item.url)
