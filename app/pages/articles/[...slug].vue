@@ -31,14 +31,17 @@
 </template>
 <script setup>
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => {
-    return queryCollection("article").path(route.path).first();
-});
+const slug = Array.isArray(route.params.slug)
+    ? route.params.slug.join("/")
+    : route.params.slug;
+const { data: page } = await useAsyncData(`article-${slug}`, () =>
+    queryCollection("article").path(`/articles/${slug}`).first()
+);
 
 if (!page.value) {
     throw createError({
         statusCode: 404,
-        statusMessage: `Page not found for path: ${route.path}`,
+        statusMessage: `Page not found for slug: ${slug}`,
     });
 }
 </script>
