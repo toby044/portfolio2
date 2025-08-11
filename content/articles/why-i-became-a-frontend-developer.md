@@ -1,3 +1,8 @@
+---
+date: 2025-07-03T00:00:00.000Z
+tags: []
+---
+
 ## Growing Up Digital
 
 I didn’t grow up planning to be a developer—but I did grow up around technology. My childhood was full of computers, games, and the internet. My dad was the kind of person who always had some project running on an old machine or was tinkering with something obscure. I didn’t think much of it at the time—it was just normal.
