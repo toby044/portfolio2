@@ -1,1 +1,0 @@
-import{_ as t,d as c,e as r,h as e,W as o}from"./zMDCEPyF.js";const a={},n={class:"grid grid-cols-3 gap-4"},i={class:"grow"},_={class:"grow"},d={class:"grow"};function l(s,g){return r(),c("div",n,[e("div",i,[o(s.$slots,"left")]),e("div",_,[o(s.$slots,"center")]),e("div",d,[o(s.$slots,"right")])])}const h=Object.assign(t(a,[["render",l]]),{__name:"Pictures"});export{h as default};
