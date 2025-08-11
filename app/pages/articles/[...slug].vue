@@ -41,9 +41,14 @@ const slug = Array.isArray(route.params.slug)
 const { data: page } = await useAsyncData(`article-${slug}`, () =>
     queryCollection("article").path(`/articles/${slug}`).first()
 );
-const { date, title, body } = page.value || {};
 
-console.log(page.value);
+const date = computed(() => page.value?.date);
+const title = computed(() => page.value?.title);
+const body = computed(() => page.value?.body);
+
+watch(page, (val) => {
+    console.log(val);
+});
 
 // if (!page.value) {
 //     throw createError({
