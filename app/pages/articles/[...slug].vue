@@ -46,9 +46,9 @@ const date = computed(() => page.value?.date);
 const title = computed(() => page.value?.title);
 const body = computed(() => page.value?.body);
 
-watch(page, (val) => {
-    console.log(val);
-});
+// watch(page, (val) => {
+//     console.log(val);
+// });
 
 // if (!page.value) {
 //     throw createError({
