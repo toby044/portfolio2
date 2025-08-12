@@ -50,7 +50,7 @@
                         class="w-full block lg:hidden"
                         :style="{ ...activeStyle }"
                     />
-                    <p>{{ item.year }}</p>
+                    <p> {{ item.year }}</p>
                     <p>{{ item.employer }}</p>
                     <p class="lg:pl-12 lg:col-span-4">{{ item.role }}</p>
                     <SectionSpacer

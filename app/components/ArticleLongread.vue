@@ -15,14 +15,17 @@
             <Transition name="longread-scroll-in">
                 <div
                     v-if="isOpen"
-                    class="fixed inset-0 top-0 left-0 z-[2] bg-[var(--theme-background)] px-6 py-20 w-screen"
+                    class="fixed top-0 h-screen left-0 z-[2] bg-[var(--theme-background)] px-6 pt-[calc(var(--dynamic-site-header-height)+4em)] pb-20 w-screen"
                 >
-                    <span class="block mb-4">Articles</span>
+                    <span class="block mb-2 mt-16">Articles</span>
                     <ul class="">
                         <li
                             v-for="(item, index) in articles"
                             :key="item.id"
                             class="c-article-long-read__link flex gap-x-4 mb-6 text-xl font-semibold transition-opacity duration-200"
+                            :style="{
+                                '--index': index,
+                            }"
                         >
                             <span>{{ index + 1 }}</span>
                             <NuxtLink
@@ -33,7 +36,7 @@
                         </li>
                     </ul>
                     <button
-                        class="absolute top-4 right-4 cursor-pointer"
+                        class="absolute top-[calc(var(--dynamic-site-header-height)+4em)] right-6 cursor-pointer"
                         @click="isOpen = !isOpen"
                     >
                         <Icon
@@ -70,8 +73,13 @@ const { data: articles } = useAsyncData("article", () =>
 // if (route.path === "/article" && articles.value?.length > 0) {
 //     router.replace(articles.value[0].path);
 // }
-
 const isOpen = ref(false);
+
+watch(isOpen, (val) => {
+    if (import.meta.client) {
+        document.body.style.overflow = val ? "hidden" : "";
+    }
+});
 </script>
 <style lang="postcss">
 .c-article-long-read__link {
@@ -83,11 +91,31 @@ const isOpen = ref(false);
 
 .longread-scroll-in-enter-active,
 .longread-scroll-in-leave-active {
-    transition: all 0.3s ease-in-out;
+    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    & .c-article-long-read__link {
+        transition: all 500ms calc(var(--index, 0) * 50ms)
+            cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
-.longread-scroll-in-enter-from,
+.longread-scroll-in-enter-from {
+    clip-path: inset(0 100% 0 0);
+    & .c-article-long-read__link {
+        transform: translateY(calc((var(--index, 0) + 5) * 10px));
+        opacity: 0;
+    }
+}
+.longread-scroll-in-enter-to {
+    clip-path: inset(0 0 0 0);
+}
+.longread-scroll-in-leave-from {
+    clip-path: inset(0 0 0 0);
+}
 .longread-scroll-in-leave-to {
-    transform: translateX(-100%);
+    clip-path: inset(0 100% 0 0); /* instead of 0 0 0 100% */
+    & .c-article-long-read__link {
+        transform: translateY(calc((var(--index, 0) + 5) * 10px));
+        opacity: 0;
+    }
 }
 </style>

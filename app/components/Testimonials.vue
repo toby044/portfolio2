@@ -1,13 +1,13 @@
 <template>
     <div>
         <span class="font-semibold block mb-9 lg:mb-16">Testimonials</span>
-        <div class="grid lg:grid-cols-4 gap-6 lg:max-h-[40vh] lg:overflow-auto">
+        <div class="grid lg:grid-cols-4 gap-6 ">
             <div
                 v-for="(item, index) in testimonials"
                 class="font-semibold leading-[100%] -tracking-[0.2px]"
             >
                 <span
-                    class="s-rich-text"
+                    class="s-rich-text block lg:max-h-[40vh] lg:overflow-auto border-b border-[var(--theme-main)] pb-6 "
                     v-html="item.what"
                 ></span>
                 <br />

@@ -6,11 +6,11 @@
         }"
     >
         <button
-            class="pl-2 pt-2 pb-2 pr-1 rounded-l-full flex items-center justify-center bg-[var(--theme-main)] text-[var(--theme-background)]"
+            class="pl-2 pt-2 pb-2 pr-1 rounded-l-full flex cursor-pointer items-center justify-center bg-[var(--theme-main)] text-[var(--theme-background)] group"
         >
             <Icon
                 name="mdi:arrow-left"
-                class="size-5 lg:size-6"
+                class="size-5 lg:size-6 group-hover:-translate-x-1 transition-transform duration-300"
             />
         </button>
     </div>

@@ -1,6 +1,8 @@
 <template>
     <div class="min-h-screen">
-        <div class="lg:ml-[var(--dynamic-site-header-height)] p-6 pb-16 lg:p-16">
+        <div
+            class="p-6 pb-16 pt-[var(--dynamic-site-header-height)] min-h-screen ml-0 lg:p-16 lg:ml-[var(--dynamic-site-header-height)] lg:mt-0"
+        >
             <AsideMenu />
             <AppHeader class="hidden lg:flex mb-[25vh]" />
             <ThemeSelector />
