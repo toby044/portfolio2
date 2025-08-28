@@ -6,16 +6,16 @@
   >
     <Icon
       name="material-symbols:close"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-5 lg:size-6 group-hover:-translate-x-4 transition-transform duration-200"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-5 lg:size-6 group-hover:-translate-x-3 transition-transform duration-200"
       :class="{
-        'opacity-0': isOpen
+        'opacity-0': !isOpen
       }"
     />
     <Icon
       name="material-symbols:settings"
       class="size-5 lg:size-6 group-hover:-translate-x-1 transition-transform duration-200"
       :class="{
-        'opacity-0': !isOpen
+        'opacity-0': isOpen
       }"
     />
   </button>
