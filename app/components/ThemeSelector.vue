@@ -12,12 +12,12 @@
     >
       <Icon
         v-if="isOpen"
-        name="mdi:close"
+        name="material-symbols:close"
         class="size-5 lg:size-6 group-hover:-translate-x-1 transition-transform duration-200"
       />
       <Icon
-        v-else
-        name="mdi:settings"
+        v-if="!isOpen"
+        name="material-symbols:settings"
         class="size-5 lg:size-6 group-hover:-translate-x-1 transition-transform duration-200"
       />
     </button>
