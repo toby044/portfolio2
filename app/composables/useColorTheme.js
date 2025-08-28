@@ -1,34 +1,7 @@
-import RedTheme from '~/assets/js/red.js'
-import YellowTheme from '~/assets/js/yellow.js'
-import GrayTheme from '~/assets/js/gray.js'
-import BrownTheme from '~/assets/js/brown.js'
-import BlueTheme from '~/assets/js/blue.js'
-import GreenTheme from '~/assets/js/green.js'
+import Themes from '~/assets/js/themes.js';
 
 export const useColorTheme = async (selected) => {
-    let theme;
-    if (selected) {
-        switch (selected) {
-            case 'red':
-                theme = RedTheme;
-                break;
-            case 'yellow':
-                theme = YellowTheme;
-                break;
-            case 'gray':
-                theme = GrayTheme;
-                break;
-            case 'brown':
-                theme = BrownTheme;
-                break;
-            case 'blue':
-                theme = BlueTheme;
-                break;
-            case 'green':
-                theme = GreenTheme;
-                break;
-        }
-    }
+    const theme = Themes.find((t) => t.name === selected);
 
     if (import.meta.client) {
         document.documentElement.style.setProperty(
@@ -44,4 +17,7 @@ export const useColorTheme = async (selected) => {
             `rgba(${theme.main}, 0.07)`
         );
     }
+
+    const cookieTheme = useCookie('color-theme');
+    cookieTheme.value = theme.name;
 }

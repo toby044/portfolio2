@@ -3,7 +3,7 @@
         <HeadIcon class="text-[60vw] sm:text-[40vw] lg:text-[25vw] !mb-0" />
         <h1
             id="hero-split"
-            class="text-[3rem] sm:text-[5rem] md:text-[6.5rem] leading-[90%] lg:text-[8rem] lg:leading-[80%] lg:-tracking-[3.5px] font-bold block mb-28"
+            class="text-[3rem] sm:text-[5rem] md:text-[6.5rem] leading-[90%] lg:text-[8rem] lg:leading-[80%] lg:-tracking-[3.5px] font-bold block mb-16 lg:mb-28"
         >
             Passionate about building
             <BlocksIcon
