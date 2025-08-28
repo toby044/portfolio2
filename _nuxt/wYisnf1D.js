@@ -1,1 +1,0 @@
-import{_ as o,d as s,e as t,W as a}from"./B7knfYAp.js";const c={},n={class:"p-6 bg-[var(--theme-main)] rounded-2xl"};function r(e,l){return t(),s("div",n,[a(e.$slots,"default")])}const d=Object.assign(o(c,[["render",r]]),{__name:"CodeBlock"});export{d as default};
