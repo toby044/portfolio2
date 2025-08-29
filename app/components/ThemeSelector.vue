@@ -27,7 +27,7 @@
       :key="item.value"
       class="capitalize cursor-pointer h-10 w-10 flex items-center justify-center ease-out rounded-full transition-all"
       :class="{
-        'opacity-0 translate-x-2': !isOpen,
+        'opacity-0 translate-x-2 pointer-events-none': !isOpen,
       }"
       :style="{
         backgroundColor: `rgb(${item.main})`,
