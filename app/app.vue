@@ -9,6 +9,7 @@
 const transition = useState("page-transition");
 const theme = useCookie('color-theme');
 useColorTheme(theme.value || "brown");
+
 if (import.meta.server) {
   useSeoMeta({
     title: "Tobias Olesen",

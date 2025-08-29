@@ -35,6 +35,7 @@
           ? `${index * 0.05}s`
           : `${(themes.length - index - 1) * 0.05}s`,
       }"
+      :aria-label="`Select ${item.name} theme`"
       @click="setTheme(item.name)"
     >
       <span
