@@ -1,11 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
+import Themes from './app/assets/js/themes.js';
 
 export default defineNuxtConfig({
 
   devtools: { enabled: true },
   app: {
-    pageTransition: { name: 'page' }
+    pageTransition: { name: 'page' },
+    head: {
+      script: [
+        {
+          innerHTML: `
+            (function() {
+              try {
+                const cookieMatch = document.cookie.match(/color-theme=([^;]+)/);
+                const themeName = cookieMatch ? decodeURIComponent(cookieMatch[1]) : "brown";
+                document.documentElement.setAttribute("data-theme", themeName);
+              } catch (e) {
+                console.warn("Theme preload failed", e);
+              }
+            })();
+          `,
+          tagPosition: "head",
+        },
+      ],
+    },
   },
   future: {
     compatibilityVersion: 4,

@@ -10,6 +10,38 @@ body {
     color: var(--theme-main);
 }
 
+/* Color themes */
+:root[data-theme="red"] {
+    --theme-main: rgb(239, 70, 92);
+    --theme-background: rgb(211, 213, 223);
+    --theme-background-opacity: rgba(239, 70, 92, 0.07);
+}
+:root[data-theme="blue"] {
+    --theme-main: rgb(0, 0, 255);
+    --theme-background: rgb(211, 213, 223);
+    --theme-background-opacity: rgba(0, 0, 255, 0.07);
+}
+:root[data-theme="gray"] {
+    --theme-main: rgb(53, 56, 72);
+    --theme-background: rgb(211, 213, 223);
+    --theme-background-opacity: rgba(53, 56, 72, 0.07);
+}
+:root[data-theme="brown"] {
+    --theme-main: rgb(3, 45, 68);
+    --theme-background: rgb(203, 187, 176);
+    --theme-background-opacity: rgba(3, 45, 68, 0.07);
+}
+:root[data-theme="green"] {
+    --theme-main: rgb(205, 198, 211);
+    --theme-background: rgb(100, 111, 88);
+    --theme-background-opacity: rgba(205, 198, 211, 0.07);
+}
+:root[data-theme="yellow"] {
+    --theme-main: rgb(53, 56, 72);
+    --theme-background: rgb(255, 222, 47);
+    --theme-background-opacity: rgba(53, 56, 72, 0.07);
+}
+
 :root {
     --easing-ease-slow: cubic-bezier(0.35, 0.15, 0.2, 1);
     @supports (transition-timing-function: linear(0, 0.5, 1)) {
