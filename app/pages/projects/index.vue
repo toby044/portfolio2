@@ -50,7 +50,7 @@
                         class="w-full block lg:hidden"
                         :style="{ ...activeStyle }"
                     />
-                    <p> {{ item.year }}</p>
+                    <p>{{ item.year }}</p>
                     <p>{{ item.employer }}</p>
                     <p class="lg:pl-12 lg:col-span-4">{{ item.role }}</p>
                     <SectionSpacer
@@ -84,6 +84,8 @@ const projects = [
         img: { src: "/media/img/hbr.png", alt: "Hovedstadens Beredskab" },
         role: "Frontend Developer, in charge of implementing the design system. I've acted as one of the key developers in this project, building the fundamentals for a bunch of the APIs, taken decisions on the structure etc. This is composed of a set of components, utilities, and guidelines to ensure consistency across the website. The website is built using Nuxt3, UnoCSS and a bunch of custom packages from Limbo.Works.",
     },
+];
+const citiProjects = [
     {
         title: "Viborg Kommune",
         url: "https://www.viborg.dk/",

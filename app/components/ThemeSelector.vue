@@ -1,7 +1,7 @@
 <template>
   <button
     aria-label="Select a theme"
-    class="fixed z-50 right-0 bottom-4 pl-2 h-10 pr-1 rounded-l-full flex cursor-pointer items-center justify-center bg-[var(--theme-main)] text-[var(--theme-background)] group"
+    class="fixed z-50 right-0 bottom-16 xl:bottom-8 pl-2 h-10 pr-1 rounded-l-full flex cursor-pointer items-center justify-center bg-[var(--theme-main)] text-[var(--theme-background)] group"
     @click="toggleOpen"
   >
     <Icon
@@ -20,7 +20,7 @@
     />
   </button>
   <div
-    class="fixed rounded-l-[25px] z-10 flex flex-row-reverse bottom-4 right-10 gap-1"
+    class="fixed rounded-l-[25px] z-10 flex flex-row-reverse bottom-16 xl:bottom-8 right-10 gap-1"
   >
     <button
       v-for="(item, index) in themes"
