@@ -4,7 +4,7 @@
   >
     <div v-for="item in projects" class="grid grid-cols-2">
       <div
-        class="h-fit sticky top-[var(--dynamic-site-header-height,64px)] left-0 pr-24"
+        class="h-fit sticky top-[var(--dynamic-site-header-height,64px)] pb-[var(--dynamic-site-header-height,64px)] left-0 pr-24"
       >
         <NuxtLink :to="item.url" class="flex items-center group w-fit">
           <h3 class="text-lg font-bold group-hover:underline">
