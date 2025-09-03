@@ -20,7 +20,7 @@
         </span>
         <h1
           v-if="title"
-          class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl lg:-tracking-[1px] lg:leading-[85%] font-semibold mb-10"
+          class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl lg:-tracking-[1px] lg:leading-[85%] font-semibold my-10"
         >
           {{ title }}
         </h1>
@@ -42,15 +42,4 @@ const { data: page } = await useAsyncData(`article-${slug}`, () =>
 const date = computed(() => page.value?.date);
 const title = computed(() => page.value?.title);
 const body = computed(() => page.value?.body);
-
-// watch(page, (val) => {
-//     console.log(val);
-// });
-
-// if (!page.value) {
-//     throw createError({
-//         statusCode: 404,
-//         statusMessage: `Page not found for slug: ${slug}`,
-//     });
-// }
 </script>

@@ -11,32 +11,36 @@
             >
                 <NuxtLink
                     :to="item.url"
-                    class="flex items-center group w-fit"
+                    target="_blank"
+                    external
+                    class="flex items-center group"
                 >
-                    <h3 class="text-lg font-bold group-hover:underline">
-                        {{ item.title }}
+                    <h3
+                        class="text-[3rem] sm:text-[5rem] md:text-[6.5rem] leading-[90%] lg:text-[8rem] lg:leading-[80%] lg:-tracking-[3.5px] font-bold block 2xl:w-[90%]"
+                    >
+                        {{ item.title
+                        }}<Icon
+                            name="mdi:arrow-top-right"
+                            size="65px"
+                            class="h-[1lh] -mb-[13.5px] inline-block transition-transform duration-300 ease-[var(--easing-ease-slow)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                        />
                     </h3>
-                    <Icon
-                        name="mdi:arrow-top-right"
-                        size="20px"
-                        class="inline-block ml-2 transition-transform duration-300 ease-[var(--easing-ease-slow)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                    />
                 </NuxtLink>
                 <span
-                    class="text-sm max-w-3/4 s-rich-text"
+                    class="max-w-[45ch] text-sm s-rich-text block mt-[1.5lh]"
                     v-html="item.description"
                 ></span>
             </div>
             <div
                 v-if="item.images"
-                class="min-h-screen"
+                class="min-h-screen flex flex-col gap-4"
             >
                 <NuxtImg
                     v-for="image in item.images"
                     :src="image.src"
                     :alt="image.alt"
                     loading="eager"
-                    class="c-project-image w-full block"
+                    class="c-project-image w-full block rounded-md"
                     fetchpriority="high"
                 />
             </div>
