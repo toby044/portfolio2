@@ -24,7 +24,7 @@
                     <li
                         v-for="item in articles"
                         :key="item.id"
-                        class="flex gap-x-4 mb-20 group text-[2rem] sm:text-[5rem] md:text-[5.5rem] leading-[90%] lg:text-[7rem] lg:leading-[80%] lg:-tracking-[3.5px] font-bold"
+                        class="flex gap-x-4 mb-4 lg:mb-16 group text-[2rem] sm:text-[3rem] md:text-[4rem] leading-[90%] lg:text-[5rem] lg:leading-[80%] lg:-tracking-[3.5px] font-bold"
                     >
                         <NuxtLink
                             :to="item.path"
