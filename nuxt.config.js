@@ -5,6 +5,9 @@ import Themes from './app/assets/js/themes.js';
 export default defineNuxtConfig({
 
   devtools: { enabled: true },
+  experimental: {
+    entryImportMap: false
+  },
   app: {
     pageTransition: { name: 'page' },
     head: {
