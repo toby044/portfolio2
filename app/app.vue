@@ -56,7 +56,7 @@ useSeoMeta({
 @media (min-width: 1024px) {
     .transition-up-enter-active,
     .transition-up-leave-active {
-        transition: all 0.45s ease-out;
+        transition: all 0.425s ease-out;
     }
     .transition-up-enter-from {
         transform: translateY(45dvh);
@@ -69,7 +69,7 @@ useSeoMeta({
 
     .transition-down-enter-active,
     .transition-down-leave-active {
-        transition: all 0.45s ease-in;
+        transition: all 0.425s ease-in;
     }
 
     .transition-down-enter-from {
