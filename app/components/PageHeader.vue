@@ -25,12 +25,19 @@
         </p>
     </div>
 </template>
-<script setup>
-defineProps({
-    title: String,
-    description: String,
-    date: String,
-    crumbs: Array,
-});
+<script setup lang="ts">
+interface BreadcrumbItem {
+  label: string;
+  to?: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  date?: string;
+  crumbs?: BreadcrumbItem[];
+}
+
+defineProps<Props>();
 </script>
 <style lang="postcss"></style>

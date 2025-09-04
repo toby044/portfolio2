@@ -29,17 +29,23 @@
     </NuxtLayout>
   </div>
 </template>
-<script setup>
+<script setup lang="ts">
+interface ArticlePage {
+  date?: string;
+  title?: string;
+  body?: any;
+}
+
 const route = useRoute();
 const slug = Array.isArray(route.params.slug)
   ? route.params.slug.join("/")
   : route.params.slug;
 
-const { data: page } = await useAsyncData(`article-${slug}`, () =>
+const { data: page } = await useAsyncData<ArticlePage>(`article-${slug}`, () =>
   queryCollection("article").path(`/articles/${slug}`).first()
 );
 
-const date = computed(() => page.value?.date);
-const title = computed(() => page.value?.title);
+const date = computed((): string | undefined => page.value?.date);
+const title = computed((): string | undefined => page.value?.title);
 const body = computed(() => page.value?.body);
 </script>

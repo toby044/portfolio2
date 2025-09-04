@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
-import Themes from './app/assets/js/themes.js';
+import Themes from './app/assets/js/themes';
 
 export default defineNuxtConfig({
 
@@ -69,4 +69,4 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-})
+});
