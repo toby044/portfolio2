@@ -46,13 +46,7 @@
   </div>
 </template>
 <script setup>
-import red from "~/assets/js/red.js";
-import yellow from "~/assets/js/yellow.js";
-import gray from "~/assets/js/gray.js";
-import brown from "~/assets/js/brown.js";
-import blue from "~/assets/js/blue.js";
-import green from "~/assets/js/green.js";
-const themes = [red, yellow, gray, brown, blue, green];
+import themes from '~/assets/js/themes.js';
 const isOpen = ref(false);
 
 function toggleOpen() {
@@ -63,4 +57,3 @@ function setTheme(name) {
   isOpen.value = false;
 }
 </script>
-<style></style>
