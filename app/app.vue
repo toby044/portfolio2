@@ -29,55 +29,55 @@ useSeoMeta({
 <style>
 .transition-up-enter-active,
 .transition-up-leave-active {
-    transition: all 0.4s var(--easing-ease-slow);
+    transition: all 0.45s ease-out;
 }
 .transition-up-enter-from {
-    transform: translateX(15dvw);
+    transform: translateX(55dvw);
     opacity: 0;
 }
 .transition-up-leave-to {
-    transform: translateX(-15dvw);
+    transform: translateX(-55dvw);
     opacity: 0;
 }
 
 .transition-down-enter-active,
 .transition-down-leave-active {
-    transition: all 0.4s var(--easing-ease-slow);
+    transition: all 0.45s ease-in;
 }
 .transition-down-enter-from {
-    transform: translateX(-15dvw);
+    transform: translateX(-55dvw);
     opacity: 0;
 }
 .transition-down-leave-to {
-    transform: translateX(15dvw);
+    transform: translateX(55dvw);
     opacity: 0;
 }
 
 @media (min-width: 1024px) {
     .transition-up-enter-active,
     .transition-up-leave-active {
-        transition: all 0.4s var(--easing-ease-slow);
+        transition: all 0.45s ease-out;
     }
     .transition-up-enter-from {
-        transform: translateY(30dvh);
+        transform: translateY(45dvh);
         opacity: 0;
     }
     .transition-up-leave-to {
-        transform: translateY(-30dvh);
+        transform: translateY(-45dvh);
         opacity: 0;
     }
 
     .transition-down-enter-active,
     .transition-down-leave-active {
-        transition: all 0.4s var(--easing-ease-slow);
+        transition: all 0.45s ease-in;
     }
 
     .transition-down-enter-from {
-        transform: translateY(-30dvh);
+        transform: translateY(-45dvh);
         opacity: 0;
     }
     .transition-down-leave-to {
-        transform: translateY(30dvh);
+        transform: translateY(45dvh);
         opacity: 0;
     }
 }

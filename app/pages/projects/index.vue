@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-semibold grid grid-cols-1 gap-16 lg:gap-40 mt-[calc(var(--dynamic-site-header-height,64px)+64px)] lg:mt-0"
+    class="font-semibold grid grid-cols-1 gap-16 lg:gap-40 mt-16 lg:mt-0"
   >
     <div v-for="item in projects" class="grid lg:grid-cols-2 lg:gap-x-24">
       <div
