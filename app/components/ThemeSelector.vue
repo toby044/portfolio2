@@ -8,14 +8,14 @@
       name="mdi:close"
       class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-5 lg:size-6 group-hover:-translate-x-3 transition-transform duration-200"
       :class="{
-        'opacity-0': !isOpen
+        'opacity-0': !isOpen,
       }"
     />
     <Icon
       name="mdi:settings-outline"
       class="size-5 lg:size-6 group-hover:-translate-x-1 transition-transform duration-200"
       :class="{
-        'opacity-0': isOpen
+        'opacity-0': isOpen,
       }"
     />
   </button>
@@ -23,7 +23,7 @@
     class="fixed rounded-l-[25px] z-10 flex flex-row-reverse bottom-16 xl:bottom-8 right-10 gap-1"
   >
     <button
-      v-for="(item, index) in themes"
+      v-for="(item, index) in filteredThemes"
       :key="item.value"
       class="capitalize cursor-pointer h-10 w-10 flex items-center justify-center ease-out rounded-full transition-all"
       :class="{
@@ -46,7 +46,7 @@
   </div>
 </template>
 <script setup>
-import themes from '~/assets/js/themes.js';
+import themes from "~/assets/js/themes/themes.js";
 const isOpen = ref(false);
 
 function toggleOpen() {
@@ -56,4 +56,6 @@ function setTheme(name) {
   useColorTheme(name);
   isOpen.value = false;
 }
+
+const filteredThemes = computed(() => themes.filter((t) => t.custom !== true));
 </script>

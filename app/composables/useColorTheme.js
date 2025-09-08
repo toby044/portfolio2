@@ -1,13 +1,22 @@
-import themes from '~/assets/js/themes.js';
-import Themes from '~/assets/js/themes.js';
+import themes from "~/assets/js/themes/themes.js";
 
 export const useColorTheme = async (selected) => {
-    const theme = Themes.find((t) => t.name === selected);
+  const router = useRouter();
+  const route = useRoute();
+  const theme = themes.find((t) => t.name === selected);
+  console.log(theme.name);
 
-    if (import.meta.client) {
-        document.documentElement.setAttribute("data-theme", theme.name);
-    }
+  if (import.meta.client) {
+    document.documentElement.setAttribute("data-theme", theme.name);
 
-    const cookieTheme = useCookie('color-theme');
+    const cookieTheme = useCookie("color-theme");
     cookieTheme.value = theme.name;
-}
+
+    if (route.query.theme) {
+      const newQuery = { ...route.query };
+      delete newQuery.theme;
+
+      router.replace({ query: newQuery });
+    }
+  }
+};

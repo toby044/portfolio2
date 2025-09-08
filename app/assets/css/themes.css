@@ -1,0 +1,54 @@
+/* Default themes */
+:root[data-theme="red"] {
+  --theme-main: rgb(239, 70, 92);
+  --theme-background: rgb(211, 213, 223);
+  --theme-background-opacity: rgba(239, 70, 92, 0.07);
+}
+:root[data-theme="blue"] {
+  --theme-main: rgb(0, 0, 255);
+  --theme-background: rgb(211, 213, 223);
+  --theme-background-opacity: rgba(0, 0, 255, 0.07);
+}
+:root[data-theme="gray"] {
+  --theme-main: rgb(53, 56, 72);
+  --theme-background: rgb(211, 213, 223);
+  --theme-background-opacity: rgba(53, 56, 72, 0.07);
+}
+:root[data-theme="brown"] {
+  --theme-main: rgb(3, 45, 68);
+  --theme-background: rgb(203, 187, 176);
+  --theme-background-opacity: rgba(3, 45, 68, 0.07);
+}
+:root[data-theme="green"] {
+  --theme-main: rgb(205, 198, 211);
+  --theme-background: rgb(100, 111, 88);
+  --theme-background-opacity: rgba(205, 198, 211, 0.07);
+}
+:root[data-theme="yellow"] {
+  --theme-main: rgb(53, 56, 72);
+  --theme-background: rgb(255, 222, 47);
+  --theme-background-opacity: rgba(53, 56, 72, 0.07);
+}
+
+/* Custom themes */
+:root[data-theme="lego"] {
+  /* Red */
+  --theme-main: rgb(208, 44, 34);
+  /* White */
+  --theme-background: rgb(255, 255, 255);
+  /* Red with 0.7 opacity */
+  --theme-background-opacity: rgba(208, 44, 34, 0.07);
+  /* Yellow */
+  --theme-custom-color: rgb(252, 238, 79);
+}
+
+:root[data-theme="salling-group"] {
+  /* White */
+  --theme-main: rgb(255, 255, 255);
+  /* Salling blue */
+  --theme-background: rgb(0, 74, 98);
+  /* White with 0.7 opacity */
+  --theme-background-opacity: rgba(255, 255, 255, 0.07);
+  /* Tertiary color */
+  --theme-custom-color: rgb(255, 228, 175);
+}
