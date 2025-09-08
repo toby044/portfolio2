@@ -109,7 +109,6 @@ onMounted(() => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: img,
-          start: "top 95%",
         },
       });
     });
