@@ -8,7 +8,7 @@
 <script setup>
 const transition = useState("page-transition");
 const theme = useCookie("color-theme");
-useColorTheme(theme.value || "brown");
+useColorTheme(theme.value || "red");
 
 useHead({
     htmlAttrs: {
