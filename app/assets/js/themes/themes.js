@@ -11,14 +11,14 @@ const customThemes = [
   {
     custom: true,
     name: "lego",
-    main: "255, 205, 0",
-    background: "255, 255, 255",
   },
   {
     custom: true,
     name: "salling-group",
-    main: "255, 205, 0",
-    background: "255, 255, 255",
+  },
+  {
+    custom: true,
+    name: "cernel-ai",
   },
 ];
 
