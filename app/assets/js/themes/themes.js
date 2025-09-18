@@ -18,6 +18,10 @@ const customThemes = [
   },
   {
     custom: true,
+    name: "oxygen",
+  },
+  {
+    custom: true,
     name: "cernel-ai",
   },
 ];
