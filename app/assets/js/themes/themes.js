@@ -24,6 +24,10 @@ const customThemes = [
     custom: true,
     name: "cernel-ai",
   },
+  {
+    custom: true,
+    name: "novicell",
+  },
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];

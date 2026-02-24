@@ -65,3 +65,8 @@
   --theme-background: rgb(255, 255, 255);
   --theme-background-opacity: rgb(210, 240, 255);
 }
+:root[data-theme="novicell"] {
+  --theme-main: rgb(200, 0, 70);
+  --theme-background: rgb(242, 242, 242);
+  --theme-background-opacity: rgb(234, 234, 234);
+}
