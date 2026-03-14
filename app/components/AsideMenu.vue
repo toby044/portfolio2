@@ -1,7 +1,8 @@
 <template>
-    <div
+    <nav
         class="c-aside-menu absolute lg:fixed top-0 left-0 min-h-16 h-fit min-w-full lg:min-w-16 lg:min-h-0 lg:h-screen"
         ref="$el"
+        aria-label="Main navigation"
         style="width: max-content"
     >
         <!-- <DesktopAsideClip class="hidden lg:block" />
@@ -60,7 +61,7 @@
                 ...indicatorStyle,
             }"
         ></div> -->
-    </div>
+    </nav>
 </template>
 <script setup>
 const menuItems = [

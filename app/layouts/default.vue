@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen">
-        <div
+        <main
             class="p-6 pb-16 pt-[var(--dynamic-site-header-height)] min-h-screen ml-0 lg:p-16 lg:ml-[var(--dynamic-site-header-height,64px)] lg:mt-0"
         >
             <AsideMenu />
@@ -8,6 +8,6 @@
             <ThemeSelector />
             <slot />
             <!-- <AppFooter /> -->
-        </div>
+        </main>
     </div>
 </template>
