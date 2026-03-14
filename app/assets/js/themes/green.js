@@ -1,5 +1,5 @@
 export default {
     name:'green',
-    main: "205, 198, 211",
+    main: "240, 236, 245",
     background: "100, 111, 88",
 }

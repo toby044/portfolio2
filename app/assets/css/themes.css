@@ -1,6 +1,6 @@
 /* Default themes */
 :root[data-theme="red"] {
-  --theme-main: rgb(239, 70, 92);
+  --theme-main: rgb(176, 20, 42);
   --theme-background: rgb(211, 213, 223);
   --theme-background-opacity: rgb(250, 220, 225);
 }
@@ -20,9 +20,9 @@
   --theme-background-opacity: rgb(180, 165, 155);
 }
 :root[data-theme="green"] {
-  --theme-main: rgb(205, 198, 211);
+  --theme-main: rgb(240, 236, 245);
   --theme-background: rgb(100, 111, 88);
-  --theme-background-opacity: rgb(150, 160, 140);
+  --theme-background-opacity: rgb(65, 75, 58);
 }
 :root[data-theme="yellow"] {
   --theme-main: rgb(53, 56, 72);
@@ -37,7 +37,7 @@
   /* White */
   --theme-background: rgb(255, 255, 255);
   /* Red with 0.7 opacity */
-  --theme-background-opacity: rgb(245, 210, 205);
+  --theme-background-opacity: rgb(255, 240, 238);
   /* Yellow */
   --theme-custom-color: rgb(252, 238, 79);
 }
@@ -48,7 +48,7 @@
   /* Salling blue */
   --theme-background: rgb(0, 74, 98);
   /* White with 0.7 opacity */
-  --theme-background-opacity: rgb(100, 140, 160);
+  --theme-background-opacity: rgb(70, 108, 130);
   /* Tertiary color */
   --theme-custom-color: rgb(255, 228, 175);
 }
@@ -58,10 +58,10 @@
   /* Oxygen purple */
   --theme-background: rgb(126, 68, 235);
   /* White with 0.7 opacity */
-  --theme-background-opacity: rgb(190, 160, 245);
+  --theme-background-opacity: rgb(110, 75, 190);
 }
 :root[data-theme="cernel-ai"] {
-  --theme-main: rgb(18, 156, 255);
+  --theme-main: rgb(0, 100, 200);
   --theme-background: rgb(255, 255, 255);
   --theme-background-opacity: rgb(210, 240, 255);
 }

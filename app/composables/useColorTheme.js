@@ -4,7 +4,6 @@ export const useColorTheme = async (selected) => {
   const router = useRouter();
   const route = useRoute();
   const theme = themes.find((t) => t.name === selected);
-  console.log(theme.name);
 
   if (import.meta.client) {
     document.documentElement.setAttribute("data-theme", theme.name);
