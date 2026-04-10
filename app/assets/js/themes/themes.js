@@ -28,6 +28,10 @@ const customThemes = [
     custom: true,
     name: "novicell",
   },
+  {
+    custom: true,
+    name: "finobo",
+  },
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];
