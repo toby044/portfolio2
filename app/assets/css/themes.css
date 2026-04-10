@@ -70,3 +70,8 @@
   --theme-background: rgb(242, 242, 242);
   --theme-background-opacity: rgb(234, 234, 234);
 }
+:root[data-theme="finobo"] {
+  --theme-main: rgb(233, 74, 91);
+  --theme-background: rgb(240, 245, 246);
+  --theme-background-opacity: rgb(230, 234, 238);
+}
