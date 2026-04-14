@@ -32,6 +32,10 @@ const customThemes = [
     custom: true,
     name: "finobo",
   },
+  {
+    custom: true,
+    name: "onecode"
+  }
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];

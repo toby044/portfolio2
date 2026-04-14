@@ -75,3 +75,8 @@
   --theme-background: rgb(240, 245, 246);
   --theme-background-opacity: rgb(230, 234, 238);
 }
+:root[data-theme="onecode"] {
+  --theme-main: rgb(100, 174, 172);
+  --theme-background: rgb(255, 255, 255);
+  --theme-background-opacity: rgb(255, 255, 255);
+}
