@@ -35,6 +35,10 @@ const customThemes = [
   {
     custom: true,
     name: "onecode"
+  },
+  {
+    custom: true,
+    name: "netcompany"
   }
 ];
 
