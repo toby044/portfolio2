@@ -44,6 +44,10 @@ const customThemes = [
     custom: true,
     name: "codeoptimus"
   },
+  {
+    custom: true,
+    name: "improving"
+  },
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];
