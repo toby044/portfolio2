@@ -39,7 +39,11 @@ const customThemes = [
   {
     custom: true,
     name: "netcompany"
-  }
+  },
+  {
+    custom: true,
+    name: "codeoptimus"
+  },
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];
