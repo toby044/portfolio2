@@ -48,6 +48,10 @@ const customThemes = [
     custom: true,
     name: "improving"
   },
+  {
+    custom: true,
+    name: "bankdata"
+  },
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];

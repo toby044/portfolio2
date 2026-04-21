@@ -95,3 +95,9 @@
   --theme-background: rgb(255, 255, 255);
   --theme-background-opacity: rgb(210, 240, 255);
 }
+:root[data-theme="bankdata"] {
+  --theme-main: rgb(145, 191, 30);
+  --theme-background: rgb(250, 252, 244);
+  --theme-background-opacity: rgb(239, 245, 221);
+}
+
