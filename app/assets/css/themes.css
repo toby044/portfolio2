@@ -32,32 +32,21 @@
 
 /* Custom themes */
 :root[data-theme="lego"] {
-  /* Red */
   --theme-main: rgb(208, 44, 34);
-  /* White */
   --theme-background: rgb(255, 255, 255);
-  /* Red with 0.7 opacity */
   --theme-background-opacity: rgb(255, 240, 238);
-  /* Yellow */
   --theme-custom-color: rgb(252, 238, 79);
 }
 
 :root[data-theme="salling-group"] {
-  /* White */
   --theme-main: rgb(255, 255, 255);
-  /* Salling blue */
   --theme-background: rgb(0, 74, 98);
-  /* White with 0.7 opacity */
   --theme-background-opacity: rgb(70, 108, 130);
-  /* Tertiary color */
   --theme-custom-color: rgb(255, 228, 175);
 }
 :root[data-theme="oxygen"] {
-  /* White */
   --theme-main: rgb(255, 255, 255);
-  /* Oxygen purple */
   --theme-background: rgb(126, 68, 235);
-  /* White with 0.7 opacity */
   --theme-background-opacity: rgb(110, 75, 190);
 }
 :root[data-theme="cernel-ai"] {
@@ -99,5 +88,10 @@
   --theme-main: rgb(145, 191, 30);
   --theme-background: rgb(250, 252, 244);
   --theme-background-opacity: rgb(239, 245, 221);
+}
+:root[data-theme="setsnail"] {
+  --theme-main: rgb(39, 39, 39);
+  --theme-background: rgb(255, 255, 255);
+  --theme-background-opacity: rgb(235, 235, 235);
 }
 

@@ -52,6 +52,10 @@ const customThemes = [
     custom: true,
     name: "bankdata"
   },
+  {
+    custom: true,
+    name: "setsnail"
+  }
 ];
 
 export default [red, blue, gray, brown, green, yellow, ...customThemes];
