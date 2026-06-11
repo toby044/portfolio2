@@ -19,6 +19,7 @@ const skills = [
     "Nuxt.js",
     "TailwindCSS",
     "UnoCSS",
+    "PHP",
     "Laravel",
     "MongoDB",
     "Node.js",
@@ -28,5 +29,7 @@ const skills = [
     "Accessibility (a11y)",
     "Conventional Commits",
     "B.E.M",
+    "Claude",
+    "Codex"
 ];
 </script>
