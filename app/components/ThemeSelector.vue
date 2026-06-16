@@ -32,8 +32,8 @@
       :style="{
         backgroundColor: `rgb(${item.main})`,
         transitionDelay: isOpen
-          ? `${index * 0.05}s`
-          : `${(themes.length - index - 1) * 0.05}s`,
+          ? `${index * 0.03}s`
+          : `${(filteredThemes.length - index - 1) * 0.02}s`,
       }"
       :aria-label="`Select ${item.name} theme`"
       @click="setTheme(item.name)"
